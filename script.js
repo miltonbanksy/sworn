@@ -107,7 +107,6 @@ btnRandomStarshipName.addEventListener('click', () => {
     displayRandomStarshipName.innerHTML = " " + randomEntry;
 });
 
-// Helper functions
 
 // Process asset arrays
 function setupAssetsDisplay(data, displayAllSelector, randomDisplaySelector, buttonSelector) {

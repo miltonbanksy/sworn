@@ -136,4 +136,5 @@ function setupAssetsDisplay(data, displayAllSelector, randomDisplaySelector, but
 
 setupAssetsDisplay(array_modules, "#display-modules", "#display-random-module", "#btn-random-module");
 setupAssetsDisplay(array_support_vehicles, "#display-vehicles", "#display-random-vehicle", "#btn-random-vehicle");
+setupAssetsDisplay(array_companions, "#display-companions", "#display-random-companion", "#btn-random-companion");
 

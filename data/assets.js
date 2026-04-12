@@ -136,6 +136,58 @@ const array_support_vehicles = [
         level2: "🔴 Your exosuit is equipped with thrusters. You can maneuver in zero-g, make thrust-assisted leaps, and drop to a surface from altitude. When you burn fuel to overcome a critical obstacle (decide after rolling), you may reroll any dice. If you do, Sacrifice Resources (-1).",
         level3: "🔴 When you Withstand Damage, you may reroll one challenge die",
         other: "Integrity: [6] [5] [4] [3] [2] [1] [0], Battered: []"
+    },
+    { 
+        name: "Hoverbike",
+        level1: "🟢 Your unarmed hoverbike provides speedy planetside ground transport, and is equipped to carry up to two people and their gear. When you Undertake an Expedition (+edge), take +1 momentum on a hit. On a strong hit with a match, you also surge ahead or find a new path; mark progress.",
+        level2: "🔴 When you fire the bike’s afterburner and make a move to perform a risky maneuver, you may add +integrity and take +2 momentum on a strong hit. If you do, count a weak hit as a miss.",
+        level3: "🔴 When you make a move while maneuvering your bike and burn momentum to improve your result, roll your action die. On a 5 or 6, do not reset momentum.",
+        other: "Integrity: [3] [2] [1] [0], Battered: []"
+    },
+    { 
+        name: "Rover",
+        level1: "🟢 Your unarmed rover provides protected planetside transport. When you Undertake an Expedition or Set a Course, add +1. When you Finish an Expedition in your rover, you may reroll one challenge die.",
+        level2: "🔴 You may equip your rover with one module asset at no extra cost. When you Withstand Damage, the module can be broken or destroyed as with a command vehicle. If you reconfigure your rover, spend 1 experience, discard the module, and equip another with the same number of marked abilities.",
+        level3: "🔴 When you Face Danger or React Under Fire by taking a hit or crashing through an obstacle, you may roll +integrity. If you do, take +1 momentum on a hit.",
+        other: "Integrity: [5] [4] [3] [2] [1] [0], Battered: []"
+    },
+    { 
+        name: "Service Pod",
+        level1: "🟢 Your unarmed utility vehicle houses one pilot for short-range, low gravity operations. When you make a move using the pod’s manipulator arms to perform a delicate or forceful task, add +1 and take +1 momentum on a hit.",
+        level2: "🔴 When you Face Danger, Gain Ground, or React Under Fire by maneuvering your pod through a hazardous or obstructed area, choose an approach and roll +integrity.<br>✴ Careful: Add +2 and Lose Momentum (-1)<br>✴ Reckless: Take +1 momentum on a hit.",
+        level3: "🔴 When you make a move while controlling the pod and push its capabilities to the limit, you may take an automatic strong hit. If you do, Withstand Damage (-2).",
+        other: "Integrity: [4] [3] [2] [1] [0], Battered: []"
+    },
+    { 
+        name: "Shuttle",
+        level1: "🟢 Your unarmed shuttle provides short-range transport for several people and equipment through space or atmosphere. When you travel to a location (not your command vehicle), you and your allies may take +1 momentum when you arrive.",
+        level2: "🔴 When you Face Danger or React Under Fire to navigate through hazardous skies, avoid obstacles, or evade an attack, add +1 and take +1 momentum on a hit.",
+        level3: "🔴 Your shuttle is sealed against high pressure environments, can travel underwater, and is more resistant to damage; when you Withstand Damage, add +1.",
+        other: "Integrity: [4] [3] [2] [1] [0], Battered: []"
+    },
+    { 
+        name: "Skiff",
+        level1: "🟢 Your unarmed flatbed hover-vehicle carries several people, gear, and cargo over land or water. When you Undertake an Expedition or Set a Course, you may rely on the skiff’s simple durability and roll +integrity. If you do, take +1 momentum on a hit.",
+        level2: "🔴 Your skiff is armed with a turreted cannon. When you Strike or Clash by firing the cannon, roll +integrity and take +1 momentum on a hit. On a strong hit with a match, your shots cause extra destruction or create havoc; mark progress.",
+        level3: "🔴 Your skiff is fully stocked. When you Check Your Gear, add +1 and take +1 momentum on a hit.",
+        other: "Integrity: [4] [3] [2] [1] [0], Battered: []"
+    },
+    { 
+        name: "Snub Fighter",
+        level1: "🟢 Your armed snub fighter carries a single pilot for space or atmospheric flight and combat. When you Enter the Fray, you may roll +integrity; if you do, take +2 momentum on a hit.",
+        level2: "🔴 When you Strike or Clash, add +1. On a strong hit with a match, mark progress.",
+        level3: "🔴 When you personally defeat a notable foe in your snub fighter, envision the victory mark you make on the fuselage. Tally your victories in this box. For every five, mark 2 ticks on your quests legacy track.",
+        other: "Integrity: [4] [3] [2] [1] [0], Victories: [], Battered: []"
+    }
+];
+
+const array_companions = [
+    { 
+        name: "Banshee",
+        level1: "🟢 Your banshee companion accompanies you on planetside missions, using its echolocation to help guide the way. When you ride your banshee as you Undertake an Expedition or Set a Course, you may roll +its health.",
+        level2: "🔴 When you make a move astride the banshee to detect a threat or avoid a fight, add +1 and take +1 momentum on a hit. On a strong hit with a match, you’re gone in a flash; take another +1 momentum.",
+        level3: "🔴 When you make a combat move and roll a 1 on your action die, the banshee senses the danger and emits a powerful scream to alert you or distract your foes. You may reroll that die.",
+        other: "Health: [4] [3] [2] [1] [0], Out of Action: []"
     }
 ];
 

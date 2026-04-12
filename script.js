@@ -107,6 +107,7 @@ btnRandomStarshipName.addEventListener('click', () => {
     displayRandomStarshipName.innerHTML = " " + randomEntry;
 });
 
+
 // MODULES
 const displayRandomModule = document.querySelector('#display-random-module');
 const btnRandomModule = document.querySelector('#btn-random-module');
@@ -115,7 +116,7 @@ const displayModules = document.querySelector('#display-modules');
 
 const list_modules = [];
 
-modules.forEach(item => {
+array_modules.forEach(item => {
     const element_details = document.createElement('details');
     const element_summary = document.createElement('summary');
     element_summary.innerHTML = item.name;
@@ -126,7 +127,7 @@ modules.forEach(item => {
 });
 
 btnRandomModule.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * modules.length);
-    const randomEntry = modules[randomIndex].name;
+    const randomIndex = Math.floor(Math.random() * array_modules.length);
+    const randomEntry = array_modules[randomIndex].name;
     displayRandomModule.innerHTML = " " + randomEntry;
 });

@@ -107,31 +107,33 @@ btnRandomStarshipName.addEventListener('click', () => {
     displayRandomStarshipName.innerHTML = " " + randomEntry;
 });
 
+// Helper functions
 
-// MODULES
-const displayRandomModule = document.querySelector('#display-random-module');
-const btnRandomModule = document.querySelector('#btn-random-module');
-const displayModules = document.querySelector('#display-modules');
+// Process asset arrays
+function setupAssetsDisplay(data, displayAllSelector, randomDisplaySelector, buttonSelector) {
+    const displayContainer = document.querySelector(displayAllSelector);
+    const randomDisplay = document.querySelector(randomDisplaySelector);
+    const button = document.querySelector(buttonSelector);
 
-const list_modules = [];
+    data.forEach(item => {
+        const element_details = document.createElement('details');
+        const element_summary = document.createElement('summary');
 
-array_modules.forEach(item => {
-    const element_details = document.createElement('details');
-    const element_summary = document.createElement('summary');
-    element_summary.innerHTML = item.name;
-    element_details.innerHTML = `${item.level1}<br>${item.level2}<br>${item.level3}<br>${item.other}<br><br>`;
-    element_details.appendChild(element_summary);
-    console.log(element_details)
-    
-    displayModules.appendChild(element_details);
-});
+        element_summary.innerHTML = item.name;
+        element_details.innerHTML = `${item.level1}<br>${item.level2}<br>${item.level3}<br>${item.other}<br><br>`;
+        element_details.prepend(element_summary);
 
-btnRandomModule.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * array_modules.length);
-    const randomEntry = array_modules[randomIndex].name;
-    displayRandomModule.innerHTML = " " + randomEntry;
-});
+        displayContainer.appendChild(element_details)
+    });
 
-// I want to do the same as above for another 4 or five arrays.
-// Can I create a helper function which saves me writing all this 5 times,
-// but still displays the same way using <details><summary>
+    if (button) {
+        button.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * data.length);
+            randomDisplay.innerHTML = " " + data[randomIndex].name;
+        });
+    }
+};
+
+setupAssetsDisplay(array_modules, "#display-modules", "#display-random-module", "#btn-random-module");
+setupAssetsDisplay(array_support_vehicles, "#display-vehicles", "#display-random-vehicle", "#btn-random-vehicle");
+

@@ -116,9 +116,13 @@ const displayModules = document.querySelector('#display-modules');
 const list_modules = [];
 
 modules.forEach(item => {
-    const element = document.createElement('li');
-    element.innerHTML = `${item.name}<br>${item.level1}<br>${item.level2}<br>${item.level3}<br>${item.other}<br>`;
-    displayModules.appendChild(element);
+    const element_details = document.createElement('details');
+    const element_summary = document.createElement('summary');
+    element_summary.innerHTML = item.name;
+    element_details.innerHTML = `${item.level1}<br>${item.level2}<br>${item.level3}<br>${item.other}<br><br>`;
+    element_details.appendChild(element_summary);
+    
+    displayModules.appendChild(element_details);
 });
 
 btnRandomModule.addEventListener('click', () => {

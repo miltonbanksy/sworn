@@ -25,16 +25,51 @@ const modules = [
     { 
         name: "Engine Upgrade",
         level1: "🟢 Your vehicle carries up to 3 cargo. When you gain +supply, you may convert it to +cargo. When you make a move +supply, you may add +cargo. When you Sacrifice Resources, you may instead suffer -cargo for any portion of the cost.",
-        level2: "🔴 When you Enter the Fray, choose one (before rolling).\n✴ Maneuver: Add +1 and take +1 momentum on a strong hit. \n✴ Boost: Take +2 momentum on a hit.",
+        level2: "🔴 When you Enter the Fray, choose one (before rolling).<br>✴ Maneuver: Add +1 and take +1 momentum on a strong hit. <br>✴ Boost: Take +2 momentum on a hit.",
         level3: "🔴 When you make a desperate move to pursue a foe, escape a threat, or get in range, you may push your engines to their limit. If you do (decide after rolling), reroll any dice and count a weak hit as a strong hit. Then, Withstand Damage (-2).",
-        other: ""
+        other: "Tracks: N/A"
     },
     { 
         name: "Expanded Hold",
         level1: "🟢 Your vehicle’s finely-tuned engines speed your travels. When you Undertake an Expedition (+edge) and score a strong hit, take +1 momentum; on a strong hit with a 6 on your action die, take +2 momentum instead of +1.",
         level2: "🔴 When you score a miss or weak hit as you make a move to barter or negotiate, and you have at least 1 cargo, you may sweeten the pot. If you do, reroll all dice and add +cargo. Then, suffer -1 cargo.",
         level3: "🔴 When you make a move to outrun a threat and have at least 1 cargo, you may first lighten your load by dropping cargo. If you do, suffer -cargo by the amount dropped, add +that amount, and take +2 momentum on a hit.",
-        other: "[3] [2] [1] [0]"
+        other: "Cargo: [3] [2] [1] [0]"
+    },
+    { 
+        name: "Heavy Cannons",
+        level1: "🟢 When you aim your cannons and use them to Strike, choose one.<br>✴ Strafe: Add +1 and take +1 momentum on a hit.<br>✴ Focus fire: Mark progress on a hit, but Lose Momentum (-1).",
+        level2: "🔴 Once per fight, when you Clash by committing to an all-or-nothing exchange of fire, add +1, count a weak hit as a strong hit, and mark progress on a hit. On a miss, you must suffer a dire outcome.",
+        level3: "🔴 When you Compel, Enter the Fray, or Gain Ground by bringing your cannons to bear and sending a promise of violence to your foe over communication channels, add +1 an take +1 momentum on a hit. On a strong hit with a match, take another +1 momentum.",
+        other: "Tracks: N/A"
+    },
+    { 
+        name: "Grappler",
+        level1: "🟢 Your grappler can disrupt systems and snare machines and vehicles with a magnetic tether. When you take a minute or so to ready the grappler, roll +integrity or +wits. On a strong hit, the grappler is charged and may be fired. On a weak hit, charging requires extra time or focus; Lose Momentum (-1). On a miss, charging fails and you must Withstand Damage (-2). If you make a move to attack a foe or overcome an obstacle by firing the grappler, take an automatic strong hit.",
+        level2: "🔴 If you score a strong hit when readying the grappler, you may Sacrifice Resources (-1) to overcharge the module. When you fire an overcharged grappler, take +2 momentum; if in a fight, also mark progress.",
+        level3: "🔴 When you Take Decisive Action by firing the grappler, you may reroll one challenge die.",
+        other: "Tracks: N/A"
+    },
+    { 
+        name: "Internal Refit",
+        level1: "🟢 You have customized the cabins, common spaces, and environment of the vehicle to your needs. When you Undertake an Expedition (dangerous or greater), reroll any dice for the first leg of your journey. On a hit, you and your allies may envision how you make yourself at home; if you do, take +2 momentum or +1 spirit.",
+        level2: "🔴 Your vehicle is stocked with reserves. When you Sacrifice Resources and your supply is reduced to 0, first roll +integrity instead of marking unprepared. On a strong hit, take +1 supply. Otherwise, mark unprepared.",
+        level3: "🔴 When you Enter the Fray to oppose an invader within your vehicle, reroll any dice. On a strong hit, take +momentum equal to integrity. On a strong hit with a match, also mark progress.",
+        other: "Tracks: N/A"
+    },
+    { 
+        name: "Medbay",
+        level1: "🟢 When you use your medbay to Heal yourself or another patient, you may reroll your action die if its value is less than your vehicle’s integrity.",
+        level2: "🔴 When you or an ally mark the permanently harmed impact and are brought to the medbay without delay (less than an hour or so), you have a shot at making things right. If you Heal and score a strong hit, clear the impact (in addition to the other benefits of the move). Then, envision the scar that now serves as a reminder of the incident.",
+        level3: "🔴 When you Face Danger by performing a risky medical procedure, or if you Gather Information through an autopsy or medical examination, reroll any dice and take +1 momentum on a hit.",
+        other: "Tracks: N/A"
+    },
+    { 
+        name: "Missile Array",
+        level1: "🟢 Your missile array is armed with 5 ammo. When you Strike or Clash with a missile attack, suffer -1 ammo and mark progress on a hit. If you Resupply in a place where your missiles can be replenished, you may exchange any earned +supply for +ammo.",
+        level2: "🔴 When you have at least 1 ammo and Gain Ground by locking a missile on target, add +1 and take +1 momentum on a hit.",
+        level3: "🔴 When you have at least 3 ammo and Take Decisive Action by unleashing all of your missiles, roll an action die before making the progress roll. If your action die is equal to or less than ammo, you may reroll any challenge dice. Then, set ammo to 0.",
+        other: "Ammo: [5] [4] [3] [2] [1] [0]"
     }
 ];
 

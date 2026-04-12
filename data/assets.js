@@ -129,7 +129,7 @@ const array_modules = [
     }
 ];
 
-const support_vehicles = [
+const array_support_vehicles = [
     { 
         name: "Exosuit",
         level1: "🟢 Your lumbering rig houses one pilot, is sealed against hostile environments, and is armed with fixed or held weapons. When you make a forceful, damaging, or resistant move, you may (after rolling) replace the value of your action die with the rig’s integrity; if you do, Lose Momentum (-1).",

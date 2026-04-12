@@ -113,7 +113,6 @@ const displayRandomModule = document.querySelector('#display-random-module');
 const btnRandomModule = document.querySelector('#btn-random-module');
 const displayModules = document.querySelector('#display-modules');
 
-
 const list_modules = [];
 
 array_modules.forEach(item => {
@@ -122,6 +121,7 @@ array_modules.forEach(item => {
     element_summary.innerHTML = item.name;
     element_details.innerHTML = `${item.level1}<br>${item.level2}<br>${item.level3}<br>${item.other}<br><br>`;
     element_details.appendChild(element_summary);
+    console.log(element_details)
     
     displayModules.appendChild(element_details);
 });
@@ -131,3 +131,7 @@ btnRandomModule.addEventListener('click', () => {
     const randomEntry = array_modules[randomIndex].name;
     displayRandomModule.innerHTML = " " + randomEntry;
 });
+
+// I want to do the same as above for another 4 or five arrays.
+// Can I create a helper function which saves me writing all this 5 times,
+// but still displays the same way using <details><summary>

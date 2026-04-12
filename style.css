@@ -2,3 +2,7 @@ html {
     max-width: 360px;
     padding: 4px;
 }
+
+.indent {
+    text-indent: 20px;
+}

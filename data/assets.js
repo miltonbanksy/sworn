@@ -24,9 +24,17 @@ const character_assets = [
 const modules = [
     { 
         name: "Engine Upgrade",
-        level1: "Your vehicle’s finely-tuned engines speed your travels. When you Undertake an Expedition (+edge) and score a strong hit, take +1 momentum; on a strong hit with a 6 on your action die, take +2 momentum instead of +1.",
-        level2: "When you Enter the Fray, choose one (before rolling).\n✴ Maneuver: Add +1 and take +1 momentum on a strong hit. \n✴ Boost: Take +2 momentum on a hit.",
-        level3: "When you make a desperate move to pursue a foe, escape a threat, or get in range, you may push your engines to their limit. If you do (decide after rolling), reroll any dice and count a weak hit as a strong hit. Then, Withstand Damage (-2)."
+        level1: "🟢 Your vehicle carries up to 3 cargo. When you gain +supply, you may convert it to +cargo. When you make a move +supply, you may add +cargo. When you Sacrifice Resources, you may instead suffer -cargo for any portion of the cost.",
+        level2: "🔴 When you Enter the Fray, choose one (before rolling).\n✴ Maneuver: Add +1 and take +1 momentum on a strong hit. \n✴ Boost: Take +2 momentum on a hit.",
+        level3: "🔴 When you make a desperate move to pursue a foe, escape a threat, or get in range, you may push your engines to their limit. If you do (decide after rolling), reroll any dice and count a weak hit as a strong hit. Then, Withstand Damage (-2).",
+        other: ""
+    },
+    { 
+        name: "Expanded Hold",
+        level1: "🟢 Your vehicle’s finely-tuned engines speed your travels. When you Undertake an Expedition (+edge) and score a strong hit, take +1 momentum; on a strong hit with a 6 on your action die, take +2 momentum instead of +1.",
+        level2: "🔴 When you score a miss or weak hit as you make a move to barter or negotiate, and you have at least 1 cargo, you may sweeten the pot. If you do, reroll all dice and add +cargo. Then, suffer -1 cargo.",
+        level3: "🔴 When you make a move to outrun a threat and have at least 1 cargo, you may first lighten your load by dropping cargo. If you do, suffer -cargo by the amount dropped, add +that amount, and take +2 momentum on a hit.",
+        other: "[3] [2] [1] [0]"
     }
 ];
 

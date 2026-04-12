@@ -106,3 +106,23 @@ btnRandomStarshipName.addEventListener('click', () => {
     const randomEntry = starship_names[randomIndex];
     displayRandomStarshipName.innerHTML = " " + randomEntry;
 });
+
+// MODULES
+const displayRandomModule = document.querySelector('#display-random-module');
+const btnRandomModule = document.querySelector('#btn-random-module');
+const displayModules = document.querySelector('#display-modules');
+
+
+const list_modules = [];
+
+modules.forEach(item => {
+    const element = document.createElement('li');
+    element.innerHTML = `${item.name}<br>${item.level1}<br>${item.level2}<br>${item.level3}<br>${item.other}<br>`;
+    displayModules.appendChild(element);
+});
+
+btnRandomModule.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * modules.length);
+    const randomEntry = modules[randomIndex].name;
+    displayRandomModule.innerHTML = " " + randomEntry;
+});

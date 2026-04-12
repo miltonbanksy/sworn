@@ -19,7 +19,16 @@ const character_assets = [
     {min: 86, max: 90, background: "Engineer", Assets: "Gearhead, Tech"},
     {min: 91, max: 95, background: "Soldier", Assets: "Augmented, Mercenary"},
     {min: 96, max: 100, background: "Tomb Raider", Assets: "Scavenger, Scoundrel"}
-]
+];
+
+const modules = [
+    { 
+        name: "Engine Upgrade",
+        level1: "Your vehicle’s finely-tuned engines speed your travels. When you Undertake an Expedition (+edge) and score a strong hit, take +1 momentum; on a strong hit with a 6 on your action die, take +2 momentum instead of +1.",
+        level2: "When you Enter the Fray, choose one (before rolling).\n✴ Maneuver: Add +1 and take +1 momentum on a strong hit. \n✴ Boost: Take +2 momentum on a hit.",
+        level3: "When you make a desperate move to pursue a foe, escape a threat, or get in range, you may push your engines to their limit. If you do (decide after rolling), reroll any dice and count a weak hit as a strong hit. Then, Withstand Damage (-2)."
+    }
+];
 
 const character_paths = ["Ace", "Archer", "Armored", "Artist", "Augmented", "Bannersworn", "Blademaster", "Bounty Hunter", "Brawler", "Courier", "Demolitionist", "Devotant", "Diplomat", "Empath", "Explorer", "Fated", "Firebrand", "Fugutive", "Gearhead", "Gunner", "Gunslinger", "Haunted", "Healer", "Infiltrator", "Kinetic (Psi)", "Leader", "Looper", "Lore Hunter", "Loyalist", "Mercenary", "Naturalist", "Navigator", "Outcast", "Scavenger", "Scoundrel", "Seer", "Shade", "Slayer", "Sleuth", "Sniper", "Tech", "Trader", "Vestige", "Veteran", "Voidborn", "Weapon Master"];
 

@@ -48,48 +48,7 @@ btnRandomBackstory.addEventListener('click', () => {
 });
 
 
-// STARSHIP HISTORY
-const displayRandomStarshipHistory = document.querySelector('#display-random-starship-history');
-const btnRandomStarshipHistory = document.querySelector('#btn-random-starship-history');
-const displayStarshipHistories = document.querySelector('#display-starship-histories');
-
-const list_starship_histories = [];
-
-starship_histories.forEach(item => {
-    const element = document.createElement('li');
-    element.innerHTML = item;
-    displayStarshipHistories.appendChild(element);
-});
-
-btnRandomStarshipHistory.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * starship_histories.length);
-    const randomEntry = starship_histories[randomIndex];
-    displayRandomStarshipHistory.innerHTML = " " + randomEntry;
-});
-
-// STARSHIP CHARACTERISTICS
-const displayRandomStarshipCharacteristic = document.querySelector('#display-random-starship-characteristic');
-const btnRandomStarshipCharacteristic = document.querySelector('#btn-random-starship-characteristic');
-const displayStarshipCharacteristics = document.querySelector('#display-starship-characteristics');
-
-
-const list_starship_characteristics = [];
-
-starship_characteristics.forEach(item => {
-    const element = document.createElement('li');
-    element.innerHTML = item;
-    displayStarshipCharacteristics.appendChild(element);
-});
-
-btnRandomStarshipCharacteristic.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * starship_characteristics.length);
-    const randomEntry = starship_characteristics[randomIndex];
-    displayRandomStarshipCharacteristic.innerHTML = " " + randomEntry;
-});
-
-
-
-// Attempt to create 1 helper function
+// Helper Function - Get & Display Data
 function displayDataAsList(data, randomItemSelector, rndBtnSelector, allItemsSelector) {
     const randomItemDisplay = document.querySelector(randomItemSelector);
     const rndBtn = document.querySelector(rndBtnSelector);
@@ -100,27 +59,17 @@ function displayDataAsList(data, randomItemSelector, rndBtnSelector, allItemsSel
         element.innerHTML = item;
         allItemsDisplay.appendChild(element);
     });
-}
 
-// STARSHIP NAME
-const displayRandomStarshipName = document.querySelector('#display-random-starship-name');
-const btnRandomStarshipName = document.querySelector('#btn-random-starship-name');
-const displayStarshipNames = document.querySelector('#display-starship-names');
+    rndBtn.addEventListener('click', () => {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        randomItemDisplay.innerHTML = " " + data[randomIndex];
+    });
+    
+};
 
-
-const list_starship_names = [];
-
-starship_names.forEach(item => {
-    const element = document.createElement('li');
-    element.innerHTML = item;
-    displayStarshipNames.appendChild(element);
-});
-
-btnRandomStarshipName.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * starship_names.length);
-    const randomEntry = starship_names[randomIndex];
-    displayRandomStarshipName.innerHTML = " " + randomEntry;
-});
+displayDataAsList(starship_histories, '#display-random-starship-history', '#btn-random-starship-history', '#display-starship-histories')
+displayDataAsList(starship_characteristics, '#display-random-starship-characteristic', '#btn-random-starship-characteristic', '#display-starship-characteristics');
+displayDataAsList(starship_names, '#display-random-starship-name', '#btn-random-starship-name', '#display-starship-names');
 
 
 // Process asset arrays - refactored into 1 (big!) function.
@@ -140,12 +89,11 @@ function setupAssetsDisplay(data, displayAllSelector, randomDisplaySelector, but
         displayContainer.appendChild(element_details)
     });
 
-    if (button) {
-        button.addEventListener('click', () => {
-            const randomIndex = Math.floor(Math.random() * data.length);
-            randomDisplay.innerHTML = " " + data[randomIndex].name;
-        });
-    }
+    button.addEventListener('click', () => {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        randomDisplay.innerHTML = " " + data[randomIndex].name;
+    });
+
 };
 
 setupAssetsDisplay(array_modules, "#display-modules", "#display-random-module", "#btn-random-module");

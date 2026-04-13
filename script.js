@@ -28,27 +28,8 @@ btnRandomPath.addEventListener('click', () => {
     displayRandomPath.innerHTML = " " + randomEntry;
 });
 
-// CHARACTER BACKSTORY
-const displayBackstories = document.querySelector('#display-backstories');
-const btnRandomBackstory = document.querySelector('#btn-random-backstory');
-const displayRandomBackstory = document.querySelector('#display-random-backstory');
 
-const list_backstories = [];
-
-character_backstory_prompts.forEach(item => {
-    list_backstories.push(item);
-});
-
-displayBackstories.innerHTML = list_backstories.join(", ");
-
-btnRandomBackstory.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * character_backstory_prompts.length);
-    const randomEntry = character_backstory_prompts[randomIndex];
-    displayRandomBackstory.innerHTML = " " + randomEntry;
-});
-
-
-// Helper Function - Get & Display Data
+// Helper Function - Get & Display Data (as <list>)
 function displayDataAsList(data, randomItemSelector, rndBtnSelector, allItemsSelector) {
     const randomItemDisplay = document.querySelector(randomItemSelector);
     const rndBtn = document.querySelector(rndBtnSelector);
@@ -67,12 +48,7 @@ function displayDataAsList(data, randomItemSelector, rndBtnSelector, allItemsSel
     
 };
 
-displayDataAsList(starship_histories, '#display-random-starship-history', '#btn-random-starship-history', '#display-starship-histories')
-displayDataAsList(starship_characteristics, '#display-random-starship-characteristic', '#btn-random-starship-characteristic', '#display-starship-characteristics');
-displayDataAsList(starship_names, '#display-random-starship-name', '#btn-random-starship-name', '#display-starship-names');
-
-
-// Process asset arrays - refactored into 1 (big!) function.
+// Helper Function - Get & Display Data (as <details>)
 function setupAssetsDisplay(data, displayAllSelector, randomDisplaySelector, buttonSelector) {
     const displayContainer = document.querySelector(displayAllSelector);
     const randomDisplay = document.querySelector(randomDisplaySelector);
@@ -96,6 +72,10 @@ function setupAssetsDisplay(data, displayAllSelector, randomDisplaySelector, but
 
 };
 
+displayDataAsList(character_backstory_prompts, '#display-random-backstory', '#btn-random-backstory', '#display-backstories');
+displayDataAsList(starship_histories, '#display-random-starship-history', '#btn-random-starship-history', '#display-starship-histories')
+displayDataAsList(starship_characteristics, '#display-random-starship-characteristic', '#btn-random-starship-characteristic', '#display-starship-characteristics');
+displayDataAsList(starship_names, '#display-random-starship-name', '#btn-random-starship-name', '#display-starship-names');
 setupAssetsDisplay(array_modules, "#display-modules", "#display-random-module", "#btn-random-module");
 setupAssetsDisplay(array_support_vehicles, "#display-vehicles", "#display-random-vehicle", "#btn-random-vehicle");
 setupAssetsDisplay(array_companions, "#display-companions", "#display-random-companion", "#btn-random-companion");

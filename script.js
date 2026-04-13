@@ -73,3 +73,27 @@ setupAssetsDisplay(array_modules, "#display-modules", "#display-random-module", 
 setupAssetsDisplay(array_support_vehicles, "#display-vehicles", "#display-random-vehicle", "#btn-random-vehicle");
 setupAssetsDisplay(array_companions, "#display-companions", "#display-random-companion", "#btn-random-companion");
 
+
+// Get Primary Star
+
+const btnRndStar = document.querySelector('#btn-rnd-star');
+const displayRndStar = document.querySelector('#display-rnd-star');
+const displayStars = document.querySelector('#display-stars');
+
+function getPrimaryStar() {
+    primary_stars.forEach(item => {
+        const div = document.createElement('div');
+
+        div.innerHTML = `${item.min} - ${item.max}: ${item.description}`;
+        
+        displayStars.appendChild(div);
+    });
+}
+
+btnRndStar.addEventListener('click', () => {
+    const roll = Math.floor(Math.random() * 100) +1;
+    const star = primary_stars.find(s => roll >= s.min && roll <= s.max);
+    displayRndStar.innerHTML = " " + star.description;
+});
+
+getPrimaryStar();

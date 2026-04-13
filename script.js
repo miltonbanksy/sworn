@@ -87,6 +87,21 @@ btnRandomStarshipCharacteristic.addEventListener('click', () => {
     displayRandomStarshipCharacteristic.innerHTML = " " + randomEntry;
 });
 
+
+
+// Attempt to create 1 helper function
+function displayDataAsList(data, randomItemSelector, rndBtnSelector, allItemsSelector) {
+    const randomItemDisplay = document.querySelector(randomItemSelector);
+    const rndBtn = document.querySelector(rndBtnSelector);
+    const allItemsDisplay = document.querySelector(allItemsSelector);
+
+    data.forEach(item => {
+        const element = document.createElement('li');
+        element.innerHTML = item;
+        allItemsDisplay.appendChild(element);
+    });
+}
+
 // STARSHIP NAME
 const displayRandomStarshipName = document.querySelector('#display-random-starship-name');
 const btnRandomStarshipName = document.querySelector('#btn-random-starship-name');
@@ -108,7 +123,7 @@ btnRandomStarshipName.addEventListener('click', () => {
 });
 
 
-// Process asset arrays
+// Process asset arrays - refactored into 1 (big!) function.
 function setupAssetsDisplay(data, displayAllSelector, randomDisplaySelector, buttonSelector) {
     const displayContainer = document.querySelector(displayAllSelector);
     const randomDisplay = document.querySelector(randomDisplaySelector);

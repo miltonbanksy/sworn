@@ -83,7 +83,7 @@
             <details>
                 <summary class="indent">Example Path Assets <button id="btn-random-path">Random</button><span id="display-random-path"></span></summary>
                 <br>
-                <ul id="display-character-paths"></ul>
+                <ol id="display-character-paths"></ol>
                 <br>
             </details>
             
@@ -91,7 +91,7 @@
             <details>
                 <summary class="indent">Example Backstory Prompts <button id="btn-random-backstory">Random</button><span id="display-random-backstory"></span></summary>
                 <br>
-                <ul id="display-backstories"></ul>
+                <ol id="display-backstories"></ol>
                 <br>
             </details>
 
@@ -154,12 +154,6 @@
             <p>12) Define your appearance, personality, and attire.</p>
 
             <p>13) Give your character a name, surname, and callsign.</p>
-            <details>
-                <summary class="indent">Example Names <button id="btn-random-starship-name">Random</button><span id="display-random-name"></span></summary>
-                <br>
-                <ol id="display-names"></ol>
-                <br>
-            </details>
 
             <p>14) Gear up.</p>
             <ul>You are equipped and armed as appropriate to your vision for your character and the nature of your setting. Note any important equipment or personal items. What do you swear your vows on?</ul>
@@ -169,23 +163,47 @@
 
     <details>
         <summary>Sectors</summary>
-        <p>Universe (The Forge) > Region (Terminus) > Sector (The Shallows) > Solar System > Planet or Deep Space > Settlement</p>
-        <p>Decide which region of space you will start in. For example:
-            <ul>
-                <li>Terminus (Most populated, 'civilized' region)</li>
-                <li>Outlands (Dangerous borderlands)</li>
-                <li>Expanse (Uncharted space)</li>
-                <li>Void (Exists, but don't start here)</li>
-            </ul>
-        </p>
+        <ul>
+            <p>Universe (The Forge) > Region (Terminus) > Sector (The Shallows) > Solar System > Planet or Deep Space > Settlement</p>
+            <p>Create a sector sheet template</p>
+            <div>Region: </div>
+            <div>Sector: </div>
+            <div># Settlements: </div>
+            <br>
+            <div>Solar System / Star Type: </div>
+            <div>Settlements: </div>
+            <div>Settlement Name</div>
+            <div>Location: (Planetside, Orbital, Deep Space)</div>
+            <div>Population: (Few, Dozens, Hundreds, Thousands, Tens of Thousands)</div>
+            <div>Authority: (None, Ineffectual, Tollerant, Fair, Unyielding, Corrupt, Oppressive)</div>
+            <div>Settlement Projects: </div>
+            <p>Decide which region of space you will start in. For example:
+                <ul>
+                    <li>Terminus (Most populated, 'civilized' region)</li>
+                    <li>Outlands (Dangerous borderlands)</li>
+                    <li>Expanse (Uncharted space)</li>
+                    <li>Void (Exists, but don't start here)</li>
+                </ul>
+            </p>
+            
+            <p>Determine the number of 'starting' settlements
+                <ul>
+                    <li>Terminus: 4 settlements</li>
+                    <li>Outlands: 3 settlements</li>
+                    <li>Expanse: 2 settlements</li>
+                </ul>
+            </p>
+            <p>For each settlement:
+                <ol>
+                    <li>Settlement Name</li>
+                    <li>Location: Planetside, Orbital, Deep Space</li>
+                    <li>Population: Few, Dozens, Hundreds, Thousands, Tens of Thousands</li>
+                    <li>Authority: None, Ineffectual, Tollerant, Fair, Unyielding, Corrupt, Oppressive</li>
+                    <li>Settlement Projects</li>
+                </ol>
+            </p>
+        </ul>
         
-        <p>Determine the number of 'starting' settlements
-            <ul>
-                <li>Terminus: 4 settlements</li>
-                <li>Outlands: 3 settlements</li>
-                <li>Expanse: 2 settlements</li>
-            </ul>
-        </p>
     </details>
 
     <script src="data/assets.js"></script>

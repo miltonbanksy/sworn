@@ -1,32 +1,22 @@
-const displayCharacterBackgrounds = document.querySelector('#display-character-backgrounds');
+function getCharacterBackground() {
+    const displayCharacterBackgrounds = document.querySelector('#display-character-backgrounds');
+    const btnRandomBackground = document.querySelector('#btn-random-background');
+    const displayRandomBackground = document.querySelector('#display-random-background');
 
-const list_backgrounds = [];
-character_assets.forEach(item => {
-    list_backgrounds.push(item.background);
-});
+    const list_backgrounds = [];
 
-displayCharacterBackgrounds.innerHTML = list_backgrounds.join(", ");
+    character_assets.forEach(item => {
+        list_backgrounds.push(item.background);
+    });
 
-const displayCharacterPaths = document.querySelector('#display-character-paths');
-displayCharacterPaths.innerHTML = character_paths.join(", ");
+    displayCharacterBackgrounds.innerHTML = list_backgrounds.join(", ");
 
-const btnRandomBackground = document.querySelector('#btn-random-background');
-const displayRandomBackground = document.querySelector('#display-random-background');
-
-btnRandomBackground.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * character_assets.length);
-    const randomEntry = character_assets[randomIndex].background;
-    displayRandomBackground.innerHTML = " " + randomEntry;
-});
-
-const btnRandomPath = document.querySelector('#btn-random-path');
-const displayRandomPath = document.querySelector('#display-random-path');
-
-btnRandomPath.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * character_paths.length);
-    const randomEntry = character_paths[randomIndex];
-    displayRandomPath.innerHTML = " " + randomEntry;
-});
+    btnRandomBackground.addEventListener('click', () => {
+        const randomIndex = Math.floor(Math.random() * character_assets.length);
+        const randomEntry = character_assets[randomIndex].background;
+        displayRandomBackground.innerHTML = " " + randomEntry;
+    });
+}
 
 
 // Helper Function - Get & Display Data (as <list>)
@@ -46,7 +36,8 @@ function displayDataAsList(data, randomItemSelector, rndBtnSelector, allItemsSel
         randomItemDisplay.innerHTML = " " + data[randomIndex];
     });
     
-};
+}
+
 
 // Helper Function - Get & Display Data (as <details>)
 function setupAssetsDisplay(data, displayAllSelector, randomDisplaySelector, buttonSelector) {
@@ -70,8 +61,10 @@ function setupAssetsDisplay(data, displayAllSelector, randomDisplaySelector, but
         randomDisplay.innerHTML = " " + data[randomIndex].name;
     });
 
-};
+}
 
+getCharacterBackground();
+displayDataAsList(character_paths, '#display-random-path', '#btn-random-path', '#display-character-paths');
 displayDataAsList(character_backstory_prompts, '#display-random-backstory', '#btn-random-backstory', '#display-backstories');
 displayDataAsList(starship_histories, '#display-random-starship-history', '#btn-random-starship-history', '#display-starship-histories')
 displayDataAsList(starship_characteristics, '#display-random-starship-characteristic', '#btn-random-starship-characteristic', '#display-starship-characteristics');

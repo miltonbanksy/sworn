@@ -1,11 +1,18 @@
-function getActionAndTheme() {
-    const actionIndex = Math.floor(Math.random() * oracle_actions.length);
-    const action = oracle_actions[actionIndex];
-    
-    const themeIndex = Math.floor(Math.random() * oracle_themes.length);
-    const theme = oracle_themes[themeIndex];
+function getRandomFromArray(array) {
+    const index = Math.floor(Math.random() * array.length);
+    return array[index];
+}
 
-    return `${action}, ${theme}`;
+function getActionAndTheme() {
+    const rndAction = getRandomFromArray(oracle_actions);
+    const rndTheme = getRandomFromArray(oracle_themes);
+    return `${rndAction}, ${rndTheme}`;
+}
+
+function getDescriptorAndFocus() {
+    const rndDescriptor = getRandomFromArray(oracle_descriptors);
+    const rndFocus = getRandomFromArray(oracle_focuses);
+    return `${rndDescriptor}, ${rndFocus}`;
 }
 
 function getCharacterBackground() {
@@ -111,6 +118,26 @@ btnRndSettlementProject.addEventListener('click', () => {
     const roll = Math.floor(Math.random() * 100) +1;
     const settlementProject = settlement_projects.find(s => roll >= s.min && roll <= s.max);
     displayRndSettlementProject.innerHTML = " " + settlementProject.project();
+});
+
+// Get random settlement-first look
+const btnRndSettlementFirstLook = document.querySelector('#btn-rnd-settlement-first-look');
+const displayRndSettlementFirstLook = document.querySelector('#display-rnd-settlement-first-look');
+
+btnRndSettlementFirstLook.addEventListener('click', () => {
+    const roll = Math.floor(Math.random() * 100) +1;
+    const settlementFirstLook = settlement_first_look.find(s => roll >= s.min && roll <= s.max);
+    displayRndSettlementFirstLook.innerHTML = " " + settlementFirstLook.first_look();
+});
+
+// Get random settlement-trouble
+const btnRndSettlementTrouble = document.querySelector('#btn-rnd-settlement-trouble');
+const displayRndSettlementTrouble = document.querySelector('#display-rnd-settlement-trouble');
+
+btnRndSettlementTrouble.addEventListener('click', () => {
+    const roll = Math.floor(Math.random() * 100) +1;
+    const settlementTrouble = settlement_trouble.find(s => roll >= s.min && roll <= s.max);
+    displayRndSettlementTrouble.innerHTML = " " + settlementTrouble.trouble();
 });
 
 // Get Primary Star

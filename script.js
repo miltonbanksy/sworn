@@ -1,3 +1,13 @@
+function getActionAndTheme() {
+    const actionIndex = Math.floor(Math.random() * oracle_actions.length);
+    const action = oracle_actions[actionIndex];
+    
+    const themeIndex = Math.floor(Math.random() * oracle_themes.length);
+    const theme = oracle_themes[themeIndex];
+
+    return `${action}, ${theme}`;
+}
+
 function getCharacterBackground() {
     const displayCharacterBackgrounds = document.querySelector('#display-character-backgrounds');
     const btnRandomBackground = document.querySelector('#btn-random-background');
@@ -91,6 +101,16 @@ btnRndSettlementAuthority.addEventListener('click', () => {
     const roll = Math.floor(Math.random() * 100) +1;
     const settlementAuthority = settlement_authority.find(s => roll >= s.min && roll <= s.max);
     displayRndSettlementAuthority.innerHTML = " " + settlementAuthority.authority;
+});
+
+// Get random settlement-project
+const btnRndSettlementProject = document.querySelector('#btn-rnd-settlement-project');
+const displayRndSettlementProject = document.querySelector('#display-rnd-settlement-project');
+
+btnRndSettlementProject.addEventListener('click', () => {
+    const roll = Math.floor(Math.random() * 100) +1;
+    const settlementProject = settlement_projects.find(s => roll >= s.min && roll <= s.max);
+    displayRndSettlementProject.innerHTML = " " + settlementProject.project();
 });
 
 // Get Primary Star

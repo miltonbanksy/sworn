@@ -7,3 +7,7 @@ html {
 .indent {
     text-indent: 40px;
 }
+
+.bgd-yellow {
+    background-color: lightgoldenrodyellow;
+}

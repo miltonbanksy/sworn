@@ -186,6 +186,7 @@
             <hr>
         </ul>
     </details>
+    
     <details>
         <summary>Sectors</summary>
         <ul>
@@ -207,19 +208,27 @@
                     <li>Expanse: 2 settlements</li>
                 </ul>
             </p>
+            
             <p>4) For each settlement:
                 <ol>
                     <li>Settlement Name</li>
+                    
                     <li>Location: Planetside, Orbital, Deep Space
                         <button id="btn-rnd-settlement-location">Random</button>
-                        <span id="display-rnd-settlement-location"></span>
+                        <span class="bgd-yellow" id="display-rnd-settlement-location"></span>
                     </li>
+                    
                     <li>Population: Few, Dozens, Hundreds, Thousands, Tens of Thousands</li>
+                    
                     <li>Authority: None, Ineffectual, Tollerant, Fair, Unyielding, Corrupt, Oppressive
                         <button id="btn-rnd-settlement-authority">Random</button>
-                        <span id="display-rnd-settlement-authority"></span>
+                        <span class="bgd-yellow" id="display-rnd-settlement-authority"></span>
                     </li>
-                    <li>Settlement Projects (1-2)</li>
+                
+                    <li>Settlement Projects (1-2)
+                        <button id="btn-rnd-settlement-project">Random</button>
+                        <div class="bgd-yellow" id="display-rnd-settlement-project"></div>
+                    </li>
                 </ol>
             </p>
             <p>5) If a settlement is located on a planet, or in orbit around a planet:
@@ -228,9 +237,13 @@
                     <li>Name the planet.</li>
                 </ul>
             </p>
+            
             <p>6) Note the primary star.</p>
             <details>
-                <summary class="indent">Primary Star <button id="btn-rnd-star">Random</button><div id="display-rnd-star"></div></summary>
+                <summary class="indent">Primary Star 
+                    <button id="btn-rnd-star">Random</button>
+                    <div class="bgd-yellow" id="display-rnd-star"></div>
+                </summary>
                 <br>
                 <ul id="display-stars"></ul>
                 <br>
@@ -264,8 +277,9 @@
                     </li>
                 </ul>
             </ul>
-            </details>
+        </details>
 
+    <script src="data/core_oracles.js"></script>
     <script src="data/assets.js"></script>
     <script src="data/planets.js"></script>
     <script src="script.js"></script>

@@ -1,3 +1,9 @@
+const settlement_location = [
+    {min: 1, max: 40, location: "Planetside"},
+    {min: 41, max: 75, location: "Orbital"},
+    {min: 76, max: 100, location: "Deep Space"}
+];
+
 const primary_stars = [
     {min: 1, max: 15, description: "Smoldering red star"},
     {min: 16, max: 30, description: "Glowing orange star"},

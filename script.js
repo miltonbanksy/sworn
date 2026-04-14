@@ -73,6 +73,15 @@ setupAssetsDisplay(array_modules, "#display-modules", "#display-random-module", 
 setupAssetsDisplay(array_support_vehicles, "#display-vehicles", "#display-random-vehicle", "#btn-random-vehicle");
 setupAssetsDisplay(array_companions, "#display-companions", "#display-random-companion", "#btn-random-companion");
 
+// Get random settlement-location
+const btnRndSettlementLocation = document.querySelector('#btn-rnd-settlement-location');
+const displayRndSettlementLocation = document.querySelector('#display-rnd-settlement-location');
+
+btnRndSettlementLocation.addEventListener('click', () => {
+    const roll = Math.floor(Math.random() * 100) +1;
+    const settlementLoc = settlement_location.find(s => roll >= s.min && roll <= s.max);
+    displayRndSettlementLocation.innerHTML = " " + settlementLoc.location;
+});
 
 // Get Primary Star
 

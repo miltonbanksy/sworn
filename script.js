@@ -83,6 +83,16 @@ btnRndSettlementLocation.addEventListener('click', () => {
     displayRndSettlementLocation.innerHTML = " " + settlementLoc.location;
 });
 
+// Get random settlement-authority
+const btnRndSettlementAuthority = document.querySelector('#btn-rnd-settlement-authority');
+const displayRndSettlementAuthority = document.querySelector('#display-rnd-settlement-authority');
+
+btnRndSettlementAuthority.addEventListener('click', () => {
+    const roll = Math.floor(Math.random() * 100) +1;
+    const settlementAuthority = settlement_authority.find(s => roll >= s.min && roll <= s.max);
+    displayRndSettlementAuthority.innerHTML = " " + settlementAuthority.authority;
+});
+
 // Get Primary Star
 
 const btnRndStar = document.querySelector('#btn-rnd-star');

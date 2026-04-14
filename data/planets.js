@@ -4,6 +4,16 @@ const settlement_location = [
     {min: 76, max: 100, location: "Deep Space"}
 ];
 
+const settlement_authority = [
+    {min: 1, max: 15, authority: "None / lawless"},
+    {min: 16, max: 30, authority: "Ineffectual"},
+    {min: 31, max: 45, authority: "Tolerant"},
+    {min: 46, max: 55, authority: "Fair"},
+    {min: 56, max: 70, authority: "Unyielding"},
+    {min: 71, max: 85, authority: "Corrupt"},
+    {min: 86, max: 100, authority: "Oppressive"}
+];
+
 const primary_stars = [
     {min: 1, max: 15, description: "Smoldering red star"},
     {min: 16, max: 30, description: "Glowing orange star"},

@@ -142,7 +142,43 @@ const planetary_class = [
             {aMin: 96, aMax: 100, aDescription: "Ideal"}
         ],
         pSettlements_terminus: [
-            {min: 1, max: 50, sDescription: "None"}
+            {min: 1, max: 50, sDescription: "None"},
+            {min: 51, max: 60, sDescription: "Orbital settlement"},
+            {min: 61, max: 80, sDescription: "Planetside settlement"},
+            {min: 81, max: 92, sDescription: "Multiple settlements"},
+            {min: 93, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_outlands: [
+            {min: 1, max: 75, sDescription: "None"},
+            {min: 76, max: 83, sDescription: "Orbital settlement"},
+            {min: 84, max: 95, sDescription: "Planetside settlement"},
+            {min: 96, max: 98, sDescription: "Multiple settlements"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_expanse: [
+            {min: 1, max: 90, sDescription: "None"},
+            {min: 91, max: 96, sDescription: "Orbital settlement"},
+            {min: 97, max: 100, sDescription: "Planetside settlement"},
+        ],
+        observed_from_space = [
+            {min: 1, max: 11, observed: () => "Dry seabeds"},
+            {min: 1, max: 11, observed: () => "Expansive dune seas"},
+            {min: 1, max: 11, observed: () => "Massive canyons"},
+            {min: 1, max: 11, observed: () => "Perpetual daylight"},
+            {min: 1, max: 11, observed: () => "Rugged mountains"},
+            {min: 1, max: 11, observed: () => "Sprawling salt flats"},
+            {min: 1, max: 11, observed: () => "Vast plateaus"},
+            {min: 1, max: 11, observed: () => "Vibrant terrain colors"},
+            {min: 1, max: 11, observed: () => getDescriptorAndFocus()},
+            {min: 1, max: 11, observed: () => "Precursor Vault (orbital)"}
+        ],
+        life = [
+            {min: 1, max: 20, life: "None"},
+            {min: 21, max: 40, life: "Extinct"},
+            {min: 41, max: 70, life: "Scarce"},
+            {min: 71, max: 90, life: "Diverse"},
+            {min: 91, max: 97, life: "Bountiful"},
+            {min: 98, max: 100, life: "Overrun"}
         ]
     }
 ];

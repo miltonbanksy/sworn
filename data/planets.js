@@ -1,17 +1,17 @@
 const settlement_location = [
-    {min: 1, max: 40, location: "Planetside"},
-    {min: 41, max: 75, location: "Orbital"},
-    {min: 76, max: 100, location: "Deep Space"}
+    {min: 1, max: 40, location: () => "Planetside"},
+    {min: 41, max: 75, location: () => "Orbital"},
+    {min: 76, max: 100, location: () => "Deep Space"}
 ];
 
 const settlement_authority = [
-    {min: 1, max: 15, authority: "None / lawless"},
-    {min: 16, max: 30, authority: "Ineffectual"},
-    {min: 31, max: 45, authority: "Tolerant"},
-    {min: 46, max: 55, authority: "Fair"},
-    {min: 56, max: 70, authority: "Unyielding"},
-    {min: 71, max: 85, authority: "Corrupt"},
-    {min: 86, max: 100, authority: "Oppressive"}
+    {min: 1, max: 15, authority: () => "None / lawless"},
+    {min: 16, max: 30, authority: () => "Ineffectual"},
+    {min: 31, max: 45, authority: () => "Tolerant"},
+    {min: 46, max: 55, authority: () => "Fair"},
+    {min: 56, max: 70, authority: () => "Unyielding"},
+    {min: 71, max: 85, authority: () => "Corrupt"},
+    {min: 86, max: 100, authority: () => "Oppressive"}
 ];
 
 const settlement_projects = [

@@ -1,3 +1,7 @@
+function roll_1d100() {
+    return Math.floor(Math.random() * 100) +1;
+}
+
 function getRandomFromArray(array) {
     const index = Math.floor(Math.random() * array.length);
     return array[index];
@@ -90,55 +94,26 @@ setupAssetsDisplay(array_modules, "#display-modules", "#display-random-module", 
 setupAssetsDisplay(array_support_vehicles, "#display-vehicles", "#display-random-vehicle", "#btn-random-vehicle");
 setupAssetsDisplay(array_companions, "#display-companions", "#display-random-companion", "#btn-random-companion");
 
-// Get random settlement-location
-const btnRndSettlementLocation = document.querySelector('#btn-rnd-settlement-location');
-const displayRndSettlementLocation = document.querySelector('#display-rnd-settlement-location');
 
-btnRndSettlementLocation.addEventListener('click', () => {
-    const roll = Math.floor(Math.random() * 100) +1;
-    const settlementLoc = settlement_location.find(s => roll >= s.min && roll <= s.max);
-    displayRndSettlementLocation.innerHTML = " " + settlementLoc.location;
-});
+// Create a helper function here for all functions below:
+function displayDataFromTableBasedOnDiceRoll(data, value, buttonSelector, displaySelector) {
+    const btnRnd = document.querySelector(buttonSelector);
+    const displayRnd = document.querySelector(displaySelector)
+    value = value;
+    
+    btnRnd.addEventListener('click', () => {
+        const roll = roll_1d100();
+        const obj = data.find(s => roll >= s.min && roll <= s.max);
+        displayRnd.innerHTML = obj[value]();
+    });
+}
 
-// Get random settlement-authority
-const btnRndSettlementAuthority = document.querySelector('#btn-rnd-settlement-authority');
-const displayRndSettlementAuthority = document.querySelector('#display-rnd-settlement-authority');
+displayDataFromTableBasedOnDiceRoll(settlement_location, 'location', '#btn-rnd-settlement-location', '#display-rnd-settlement-location');
+displayDataFromTableBasedOnDiceRoll(settlement_authority, 'authority', '#btn-rnd-settlement-authority', '#display-rnd-settlement-authority');
+displayDataFromTableBasedOnDiceRoll(settlement_projects, 'project', '#btn-rnd-settlement-project', '#display-rnd-settlement-project');
+displayDataFromTableBasedOnDiceRoll(settlement_first_look, 'first_look', '#btn-rnd-settlement-first-look', '#display-rnd-settlement-first-look');
+displayDataFromTableBasedOnDiceRoll(settlement_trouble, 'trouble', '#btn-rnd-settlement-trouble', '#display-rnd-settlement-trouble');
 
-btnRndSettlementAuthority.addEventListener('click', () => {
-    const roll = Math.floor(Math.random() * 100) +1;
-    const settlementAuthority = settlement_authority.find(s => roll >= s.min && roll <= s.max);
-    displayRndSettlementAuthority.innerHTML = " " + settlementAuthority.authority;
-});
-
-// Get random settlement-project
-const btnRndSettlementProject = document.querySelector('#btn-rnd-settlement-project');
-const displayRndSettlementProject = document.querySelector('#display-rnd-settlement-project');
-
-btnRndSettlementProject.addEventListener('click', () => {
-    const roll = Math.floor(Math.random() * 100) +1;
-    const settlementProject = settlement_projects.find(s => roll >= s.min && roll <= s.max);
-    displayRndSettlementProject.innerHTML = " " + settlementProject.project();
-});
-
-// Get random settlement-first look
-const btnRndSettlementFirstLook = document.querySelector('#btn-rnd-settlement-first-look');
-const displayRndSettlementFirstLook = document.querySelector('#display-rnd-settlement-first-look');
-
-btnRndSettlementFirstLook.addEventListener('click', () => {
-    const roll = Math.floor(Math.random() * 100) +1;
-    const settlementFirstLook = settlement_first_look.find(s => roll >= s.min && roll <= s.max);
-    displayRndSettlementFirstLook.innerHTML = " " + settlementFirstLook.first_look();
-});
-
-// Get random settlement-trouble
-const btnRndSettlementTrouble = document.querySelector('#btn-rnd-settlement-trouble');
-const displayRndSettlementTrouble = document.querySelector('#display-rnd-settlement-trouble');
-
-btnRndSettlementTrouble.addEventListener('click', () => {
-    const roll = Math.floor(Math.random() * 100) +1;
-    const settlementTrouble = settlement_trouble.find(s => roll >= s.min && roll <= s.max);
-    displayRndSettlementTrouble.innerHTML = " " + settlementTrouble.trouble();
-});
 
 // Get Primary Star
 
@@ -157,7 +132,7 @@ function getPrimaryStar() {
 }
 
 btnRndStar.addEventListener('click', () => {
-    const roll = Math.floor(Math.random() * 100) +1;
+    const roll = roll_1d100();
     const star = primary_stars.find(s => roll >= s.min && roll <= s.max);
     displayRndStar.innerHTML = " " + star.description;
 });

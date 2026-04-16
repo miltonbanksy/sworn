@@ -147,8 +147,55 @@ btnRndPlanet.addEventListener('click', () => {
     getPlanet();
 });
 
+function getPlanetAtmos(planet) {
+    const roll = roll_1d100();
+    const planet_atmos = planet.pAtmos.find(s => roll >= s.min && roll <= s.max);
+    return planet_atmos.aDescription;
+}
+
+function getPlanetObservedFromSpace(planet) {
+    const roll = roll_1d100();
+    const planet_observed = planet.observed_from_space.find(s => roll >= s.min && roll <= s.max);
+    return planet_observed.observed;
+}
+
+function getPlanetFeature(planet) {
+    const roll = roll_1d100();
+    const planet_feature = planet.planetside_features.find(s => roll >= s.min && roll <= s.max);
+    return planet_feature.feature;
+}
+
+function getPlanetLife(planet) {
+    const roll = roll_1d100();
+    const planet_life = planet.life.find(s => roll >= s.min && roll <= s.max);
+    return planet_life.life;
+}
+
+function getPlanetDiversity(planet) {
+    if (Object.hasOwn(planet, "diversity")) {
+        return "I haven't added this yet."; 
+    } else {
+        return "None";
+    }
+}
+
 function getPlanet() {
     const roll = roll_1d100();
     const planet = planetary_class.find(s => roll >= s.min && roll <= s.max);
-    console.log(planet.pClass);
+
+    const planet_atmos = getPlanetAtmos(planet);
+    const planet_observed = getPlanetObservedFromSpace(planet);
+    const planet_feature = getPlanetFeature(planet);
+    const planet_life = getPlanetLife(planet);
+    const planet_diversity = getPlanetDiversity(planet);
+
+    displayRndPlanet.innerHTML = `
+    TYPE: ${planet.pClass}
+    <br><br>DESCRIPTION: ${planet.pDescription}
+    <br><br>ATMOSPHERE: ${planet_atmos}
+    <br><br>OBSERVED FROM SPACE: ${planet_observed()}
+    <br><br>PLANETSIDE FEATURE: ${planet_feature()}
+    <br><br>LIFE: ${planet_life}
+    <br><br>DIVERSITY: ${planet_diversity}
+    `;
 }

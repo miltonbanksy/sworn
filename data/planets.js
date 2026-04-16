@@ -134,12 +134,12 @@ const planetary_class = [
         pClass: "Desert World",
         pDescription: "A pitiless planet of searing heat, blowing sand, and sunbaked rock.",
         pAtmos: [
-            {aMin: 1, aMax: 10, aDescription: "None / Thin"},
-            {aMin: 11, aMax: 25, aDescription: "Toxic"},
-            {aMin: 26, aMax: 40, aDescription: "Corrosive"},
-            {aMin: 41, aMax: 70, aDescription: "Marginal"},
-            {aMin: 71, aMax: 95, aDescription: "Breathable"},
-            {aMin: 96, aMax: 100, aDescription: "Ideal"}
+            {min: 1, max: 10, aDescription: "None / Thin"},
+            {min: 11, max: 25, aDescription: "Toxic"},
+            {min: 26, max: 40, aDescription: "Corrosive"},
+            {min: 41, max: 70, aDescription: "Marginal"},
+            {min: 71, max: 95, aDescription: "Breathable"},
+            {min: 96, max: 100, aDescription: "Ideal"}
         ],
         pSettlements_terminus: [
             {min: 1, max: 50, sDescription: "None"},
@@ -162,15 +162,32 @@ const planetary_class = [
         ],
         observed_from_space: [
             {min: 1, max: 11, "observed": () => "Dry seabeds"},
-            {min: 1, max: 11, "observed": () => "Expansive dune seas"},
-            {min: 1, max: 11, "observed": () => "Massive canyons"},
-            {min: 1, max: 11, "observed": () => "Perpetual daylight"},
-            {min: 1, max: 11, "observed": () => "Rugged mountains"},
-            {min: 1, max: 11, "observed": () => "Sprawling salt flats"},
-            {min: 1, max: 11, "observed": () => "Vast plateaus"},
-            {min: 1, max: 11, "observed": () => "Vibrant terrain colors"},
-            {min: 1, max: 11, "observed": () => getDescriptorAndFocus()},
-            {min: 1, max: 11, "observed": () => "Precursor Vault (orbital)"}
+            {min: 12, max: 22, "observed": () => "Expansive dune seas"},
+            {min: 23, max: 33, "observed": () => "Massive canyons"},
+            {min: 34, max: 44, "observed": () => "Perpetual daylight"},
+            {min: 45, max: 55, "observed": () => "Rugged mountains"},
+            {min: 56, max: 66, "observed": () => "Sprawling salt flats"},
+            {min: 67, max: 77, "observed": () => "Vast plateaus"},
+            {min: 78, max: 88, "observed": () => "Vibrant terrain colors"},
+            {min: 89, max: 98, "observed": () => getDescriptorAndFocus()},
+            {min: 99, max: 100, "observed": () => "Precursor Vault (orbital)"}
+        ],
+        planetside_features: [
+            {min: 1, max: 7, feature: () => "Cavernous sinkholes"},
+            {min: 8, max: 14, feature: () => "Engulfing sandstorms"},
+            {min: 15, max: 21, feature: () => "Fleeting rainstorms and flash floods"},
+            {min: 22, max: 28, feature: () => "Flooded grottos"},
+            {min: 29, max: 35, feature: () => "Petrified forests"},
+            {min: 36, max: 42, feature: () => "Rampaging whirlwinds"},
+            {min: 43, max: 49, feature: () => "Scorched glass plains"},
+            {min: 50, max: 56, feature: () => "Severe temperature fluctuations"},
+            {min: 57, max: 63, feature: () => "Sunbaked bones of titanic creatures"},
+            {min: 64, max: 70, feature: () => "Timeworn cliffside caves"},
+            {min: 71, max: 77, feature: () => "Towering rock formations"},
+            {min: 78, max: 84, feature: () => "Violent electrical storms"},
+            {min: 85, max: 91, feature: () => "Windborne metallic sand"},
+            {min: 92, max: 98, feature: () => getDescriptorAndFocus()},
+            {min: 99, max: 100, feature: () => "Precursor Vault (planetside)"}
         ],
         life: [
             {min: 1, max: 20, life: "None"},
@@ -179,6 +196,74 @@ const planetary_class = [
             {min: 71, max: 90, life: "Diverse"},
             {min: 91, max: 97, life: "Bountiful"},
             {min: 98, max: 100, life: "Overrun"}
+        ]
+    },
+    {
+        min: 16, max: 30,
+        pClass: "Furnace World",
+        pDescription: "A planet with relentless volcanic activity, wreathed in fire and ash.",
+        pAtmos: [
+            {min: 1, max: 10, aDescription: "None / Thin"},
+            {min: 11, max: 50, aDescription: "Toxic"},
+            {min: 51, max: 65, aDescription: "Corrosive"},
+            {min: 66, max: 90, aDescription: "Marginal"},
+            {min: 91, max: 100, aDescription: "Breathable"}
+        ],
+        pSettlements_terminus: [
+            {min: 1, max: 60, sDescription: "None"},
+            {min: 61, max: 75, sDescription: "Orbital settlement"},
+            {min: 76, max: 87, sDescription: "Planetside settlement"},
+            {min: 88, max: 96, sDescription: "Multiple settlements"},
+            {min: 97, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_outlands: [
+            {min: 1, max: 85, sDescription: "None"},
+            {min: 86, max: 92, sDescription: "Orbital settlement"},
+            {min: 93, max: 97, sDescription: "Planetside settlement"},
+            {min: 98, max: 99, sDescription: "Multiple settlements"},
+            {min: 100, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_expanse: [
+            {min: 1, max: 95, sDescription: "None"},
+            {min: 96, max: 98, sDescription: "Orbital settlement"},
+            {min: 99, max: 100, sDescription: "Planetside settlement"},
+        ],
+        observed_from_space: [
+            {min: 1, max: 11, "observed": () => "Fiery world-spanning chasms"},
+            {min: 12, max: 22, "observed": () => "Glowing rivers of lava"},
+            {min: 23, max: 33, "observed": () => "Lightning-wracked ash clouds"},
+            {min: 34, max: 44, "observed": () => "Magma seas"},
+            {min: 45, max: 55, "observed": () => "Massive supervolcano"},
+            {min: 56, max: 66, "observed": () => "Once verdant terrain"},
+            {min: 67, max: 77, "observed": () => "Towering mountain ranges"},
+            {min: 78, max: 88, "observed": () => "World-spanning fissures"},
+            {min: 89, max: 98, "observed": () => getDescriptorAndFocus()},
+            {min: 99, max: 100, "observed": () => "Precursor Vault (orbital)"}
+        ],
+        planetside_features: [
+            {min: 1, max: 7, feature: () => "Blinding ash storms"},
+            {min: 8, max: 14, feature: () => "Catastrophic earthquakes"},
+            {min: 15, max: 21, feature: () => "Colorful geothermal springs"},
+            {min: 22, max: 28, feature: () => "Intricate volcanic rock formations"},
+            {min: 29, max: 35, feature: () => "Lava tube tunnel networks"},
+            {min: 36, max: 42, feature: () => "Masses of scorched bones"},
+            {min: 43, max: 49, feature: () => "Plains of volcanic glass"},
+            {min: 50, max: 56, feature: () => "Pools of liquid metal"},
+            {min: 57, max: 63, feature: () => "Rocky islands adrift on magma"},
+            {min: 64, max: 70, feature: () => "Rolling clouds of superheated gas"},
+            {min: 71, max: 77, feature: () => "Scalding geysers"},
+            {min: 78, max: 84, feature: () => "Silica or metal storms"},
+            {min: 85, max: 91, feature: () => "Steaming mudflats"},
+            {min: 92, max: 98, feature: () => getDescriptorAndFocus()},
+            {min: 99, max: 100, feature: () => "Precursor Vault (planetside)"}
+        ],
+        life: [
+            {min: 1, max: 35, life: "None"},
+            {min: 36, max: 60, life: "Extinct"},
+            {min: 61, max: 85, life: "Scarce"},
+            {min: 86, max: 95, life: "Diverse"},
+            {min: 96, max: 98, life: "Bountiful"},
+            {min: 99, max: 100, life: "Overrun"}
         ]
     }
 ];

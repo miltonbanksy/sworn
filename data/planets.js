@@ -160,19 +160,19 @@ const planetary_class = [
             {min: 91, max: 96, sDescription: "Orbital settlement"},
             {min: 97, max: 100, sDescription: "Planetside settlement"},
         ],
-        observed_from_space = [
-            {min: 1, max: 11, observed: () => "Dry seabeds"},
-            {min: 1, max: 11, observed: () => "Expansive dune seas"},
-            {min: 1, max: 11, observed: () => "Massive canyons"},
-            {min: 1, max: 11, observed: () => "Perpetual daylight"},
-            {min: 1, max: 11, observed: () => "Rugged mountains"},
-            {min: 1, max: 11, observed: () => "Sprawling salt flats"},
-            {min: 1, max: 11, observed: () => "Vast plateaus"},
-            {min: 1, max: 11, observed: () => "Vibrant terrain colors"},
-            {min: 1, max: 11, observed: () => getDescriptorAndFocus()},
-            {min: 1, max: 11, observed: () => "Precursor Vault (orbital)"}
+        observed_from_space: [
+            {min: 1, max: 11, "observed": () => "Dry seabeds"},
+            {min: 1, max: 11, "observed": () => "Expansive dune seas"},
+            {min: 1, max: 11, "observed": () => "Massive canyons"},
+            {min: 1, max: 11, "observed": () => "Perpetual daylight"},
+            {min: 1, max: 11, "observed": () => "Rugged mountains"},
+            {min: 1, max: 11, "observed": () => "Sprawling salt flats"},
+            {min: 1, max: 11, "observed": () => "Vast plateaus"},
+            {min: 1, max: 11, "observed": () => "Vibrant terrain colors"},
+            {min: 1, max: 11, "observed": () => getDescriptorAndFocus()},
+            {min: 1, max: 11, "observed": () => "Precursor Vault (orbital)"}
         ],
-        life = [
+        life: [
             {min: 1, max: 20, life: "None"},
             {min: 21, max: 40, life: "Extinct"},
             {min: 41, max: 70, life: "Scarce"},

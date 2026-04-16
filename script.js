@@ -138,3 +138,13 @@ btnRndStar.addEventListener('click', () => {
 });
 
 getPrimaryStar();
+
+// Get Planet type
+function getPlanet() {
+    const roll = roll_1d100();
+    const planet = planetary_class.find(s => roll >= s.min && roll <= s.max);
+    console.log(planet.pClass);
+}
+
+// FOR TESTING ONLY. NEEDS A BUTTON...
+getPlanet();

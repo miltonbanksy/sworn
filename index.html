@@ -182,7 +182,6 @@
             <div>ATMOSPHERE: </div>
             <div>OBSERVED FROM SPACE (1-2): </div>
             <div>Planetside Feature (1-2): </div>
-            <div>Diversity: (if 'Vital World')</div>
             <div>Biomes: (if 'Vital World')</div>
             <br>
             <div>Settlement 1 Name: </div>
@@ -243,10 +242,20 @@
             <p>5) If a settlement is located on a planet, or in orbit around a planet:
                 <ul>
                     <li>Identify the planet type (desert, furnace, grave, ice, jovian, jungle, ocean, rocky, shattered, tainted, vital)
-                        <button id="btn-rnd-planet">Random</button>
-                        <div class="bgd-yellow" id="display-rnd-planet"></div>
+                    <li>Create a one sentence description</li>
+                    <li>Determine the atmosphere (None / thin, Toxic, Corrosive, Marginal, Breathable, Ideal)</li>
+                    <li>Create one major feature observable from space</li>
+                    <li>Create one planetside feature of interest</li>
+                    <li>Determine life (None, Extinct, Scarce, Diverse, Bountiful, Overrun)</li>
+                    <li>If the planet is a `Vital World`:
+                        <ul>
+                            <li>Decide how many biomes (Simple: 2, Diverse: 3, Complex: 4, Garden world: 5+)</li>
+                            <li>Then choose the biomes (caves, forest, glaciar, islands, jungle, mountains, ocean, desert, shrubland, volcanic, wetland, etc.)</li>
+                        </ul>
                     </li>
-                    <li>Name the planet.</li>
+                    <li>Name the planet</li>
+                    <button id="btn-rnd-planet">Random</button>
+                    <div class="bgd-yellow" id="display-rnd-planet"></div>
                 </ul>
             </p>
             

@@ -265,5 +265,138 @@ const planetary_class = [
             {min: 96, max: 98, life: "Bountiful"},
             {min: 99, max: 100, life: "Overrun"}
         ]
+    },
+    {
+        min: 31, max: 35,
+        pClass: "Grave World",
+        pDescription: "A once-thriving world—now a grim monument to a fallen civilization.",
+        pAtmos: [
+            {min: 1, max: 10, aDescription: "None / Thin"},
+            {min: 11, max: 45, aDescription: "Toxic"},
+            {min: 46, max: 70, aDescription: "Corrosive"},
+            {min: 71, max: 90, aDescription: "Marginal"},
+            {min: 91, max: 100, aDescription: "Breathable"}
+        ],
+        pSettlements_terminus: [
+            {min: 1, max: 80, sDescription: "None"},
+            {min: 81, max: 90, sDescription: "Orbital settlement"},
+            {min: 91, max: 95, sDescription: "Planetside settlement"},
+            {min: 96, max: 98, sDescription: "Multiple settlements"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_outlands: [
+            {min: 1, max: 90, sDescription: "None"},
+            {min: 91, max: 97, sDescription: "Orbital settlement"},
+            {min: 98, max: 100, sDescription: "Planetside settlement"}
+        ],
+        pSettlements_expanse: [
+            {min: 1, max: 95, sDescription: "None"},
+            {min: 96, max: 98, sDescription: "Orbital settlement"},
+            {min: 99, max: 100, sDescription: "Planetside settlement"},
+        ],
+        observed_from_space: [
+            {min: 1, max: 11, "observed": () => "Broken moon"},
+            {min: 12, max: 22, "observed": () => "Cratered surface"},
+            {min: 23, max: 33, "observed": () => "Dry seabeds"},
+            {min: 34, max: 44, "observed": () => "Irradiated atmosphere"},
+            {min: 45, max: 55, "observed": () => "Orbiting ship graveyard"},
+            {min: 56, max: 66, "observed": () => "Perpetual overcast"},
+            {min: 67, max: 77, "observed": () => "Sky-breaching ruins"},
+            {min: 78, max: 88, "observed": () => "Vast wastelands"},
+            {min: 89, max: 98, "observed": () => getDescriptorAndFocus()},
+            {min: 99, max: 100, "observed": () => "Precursor Vault (orbital)"}
+        ],
+        planetside_features: [
+            {min: 1, max: 7, feature: () => "Acid pools"},
+            {min: 8, max: 14, feature: () => "Ash dunes"},
+            {min: 15, max: 21, feature: () => "Corrosive rains"},
+            {min: 22, max: 28, feature: () => "Dead forests"},
+            {min: 29, max: 35, feature: () => "Fetid mudflats"},
+            {min: 36, max: 42, feature: () => "Mass graves"},
+            {min: 43, max: 49, feature: () => "Moldering bones"},
+            {min: 50, max: 56, feature: () => "Noxious fog"},
+            {min: 57, max: 63, feature: () => "Radioactive hotspots"},
+            {min: 64, max: 70, feature: () => "Ravaged cities"},
+            {min: 71, max: 77, feature: () => "Scarred battlefields"},
+            {min: 78, max: 84, feature: () => "Ship graveyards"},
+            {min: 85, max: 91, feature: () => "Whispers of the dead"},
+            {min: 92, max: 98, feature: () => getDescriptorAndFocus()},
+            {min: 99, max: 100, feature: () => "Precursor Vault (planetside)"}
+        ],
+        life: [
+            {min: 1, max: 25, life: "None"},
+            {min: 26, max: 75, life: "Extinct"},
+            {min: 76, max: 95, life: "Scarce"},
+            {min: 96, max: 100, life: "Diverse"}
+        ]
+    },
+    {
+        min: 36, max: 50,
+        pClass: "Ice World",
+        pDescription: "A rugged, frozen world—locked in an unending winter.",
+        pAtmos: [
+            {min: 1, max: 15, aDescription: "None / Thin"},
+            {min: 16, max: 35, aDescription: "Toxic"},
+            {min: 36, max: 40, aDescription: "Corrosive"},
+            {min: 41, max: 70, aDescription: "Marginal"},
+            {min: 71, max: 95, aDescription: "Breathable"},
+            {min: 96, max: 100, aDescription: "Ideal"}
+        ],
+        pSettlements_terminus: [
+            {min: 1, max: 50, sDescription: "None"},
+            {min: 51, max: 60, sDescription: "Orbital settlement"},
+            {min: 61, max: 80, sDescription: "Planetside settlement"},
+            {min: 81, max: 92, sDescription: "Multiple settlements"},
+            {min: 93, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_outlands: [
+            {min: 1, max: 75, sDescription: "None"},
+            {min: 76, max: 83, sDescription: "Orbital settlement"},
+            {min: 84, max: 95, sDescription: "Planetside settlement"},
+            {min: 96, max: 98, sDescription: "Multiple settlements"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_expanse: [
+            {min: 1, max: 90, sDescription: "None"},
+            {min: 91, max: 96, sDescription: "Orbital settlement"},
+            {min: 97, max: 100, sDescription: "Planetside settlement"},
+        ],
+        observed_from_space: [
+            {min: 1, max: 11, "observed": () => "Feeble sunlight"},
+            {min: 12, max: 22, "observed": () => "Frozen oceans"},
+            {min: 23, max: 33, "observed": () => "Rocky glacial islands"},
+            {min: 34, max: 44, "observed": () => "Snowbound mountains"},
+            {min: 45, max: 55, "observed": () => "Sky-breaching geysers"},
+            {min: 56, max: 66, "observed": () => "Supersized ice volcano"},
+            {min: 67, max: 77, "observed": () => "Vibrantly colored ice"},
+            {min: 78, max: 88, "observed": () => "World-spanning ice canyon"},
+            {min: 89, max: 98, "observed": () => getDescriptorAndFocus()},
+            {min: 99, max: 100, "observed": () => "Precursor Vault (orbital)"}
+        ],
+        planetside_features: [
+            {min: 1, max: 7, feature: () => "Abyssal ice fissures"},
+            {min: 8, max: 14, feature: () => "Blinding snow storms"},
+            {min: 15, max: 21, feature: () => "Clusters of ice spikes"},
+            {min: 22, max: 28, feature: () => "Colossal ice caves"},
+            {min: 29, max: 35, feature: () => "Glistening ice spires"},
+            {min: 36, max: 42, feature: () => "Massive snow drifts"},
+            {min: 43, max: 49, feature: () => "Preserved carcasses"},
+            {min: 50, max: 56, feature: () => "Rocky islands amid icy wastes"},
+            {min: 57, max: 63, feature: () => "Shattered plains of pack ice"},
+            {min: 64, max: 70, feature: () => "Steaming hot springs"},
+            {min: 71, max: 77, feature: () => "Subsurface liquid oceans"},
+            {min: 78, max: 84, feature: () => "Vibrant auroras"},
+            {min: 85, max: 91, feature: () => "Wind-carved ice formations"},
+            {min: 92, max: 98, feature: () => getDescriptorAndFocus()},
+            {min: 99, max: 100, feature: () => "Precursor Vault (planetside)"}
+        ],
+        life: [
+            {min: 1, max: 20, life: "None"},
+            {min: 21, max: 40, life: "Extinct"},
+            {min: 41, max: 70, life: "Scarce"},
+            {min: 71, max: 90, life: "Diverse"},
+            {min: 91, max: 97, life: "Bountiful"},
+            {min: 98, max: 100, life: "Overrun"}
+        ]
     }
 ];

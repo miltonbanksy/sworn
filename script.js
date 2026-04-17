@@ -196,6 +196,6 @@ function getPlanet() {
     <br><br>OBSERVED FROM SPACE: ${planet_observed()}
     <br><br>PLANETSIDE FEATURE: ${planet_feature()}
     <br><br>LIFE: ${planet_life}
-    <br><br>DIVERSITY: ${planet_diversity}
+    <br><br>BIOMES: ${planet_diversity}
     `;
 }

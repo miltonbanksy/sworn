@@ -398,5 +398,72 @@ const planetary_class = [
             {min: 91, max: 97, life: "Bountiful"},
             {min: 98, max: 100, life: "Overrun"}
         ]
+    },
+    {
+        min: 51, max: 65,
+        pClass: "Jovian World",
+        pDescription: "A massive planet with vast layers of dense gases surrounding a rocky core.",
+        pAtmos: [
+            {min: 1, max: 50, aDescription: "Toxic"},
+            {min: 51, max: 65, aDescription: "Corrosive"},
+            {min: 66, max: 85, aDescription: "Marginal"},
+            {min: 86, max: 100, aDescription: "Breathable"}
+        ],
+        pSettlements_terminus: [
+            {min: 1, max: 50, sDescription: "None"},
+            {min: 51, max: 70, sDescription: "Orbital settlement"},
+            {min: 71, max: 85, sDescription: "Planetside settlement"},
+            {min: 86, max: 95, sDescription: "Multiple settlements"},
+            {min: 96, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_outlands: [
+            {min: 1, max: 75, sDescription: "None"},
+            {min: 76, max: 87, sDescription: "Orbital settlement"},
+            {min: 88, max: 95, sDescription: "Planetside settlement"},
+            {min: 96, max: 98, sDescription: "Multiple settlements"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_expanse: [
+            {min: 1, max: 90, sDescription: "None"},
+            {min: 91, max: 96, sDescription: "Orbital settlement"},
+            {min: 97, max: 100, sDescription: "Planetside settlement"},
+        ],
+        observed_from_space: [
+            {min: 1, max: 11, "observed": () => "Complex ring system"},
+            {min: 12, max: 22, "observed": () => "Intense gravity well"},
+            {min: 23, max: 33, "observed": () => "Numerous moons"},
+            {min: 34, max: 44, "observed": () => "Perpetual superstorm"},
+            {min: 45, max: 55, "observed": () => "Powerful magnetic field"},
+            {min: 56, max: 66, "observed": () => "Severe electrical storms"},
+            {min: 67, max: 77, "observed": () => "Superheated atmosphere"},
+            {min: 78, max: 88, "observed": () => "Unusual atmospheric colors"},
+            {min: 89, max: 98, "observed": () => getDescriptorAndFocus()},
+            {min: 99, max: 100, "observed": () => "Precursor Vault (orbital)"}
+        ],
+        planetside_features: [
+            {min: 1, max: 7, feature: () => "Clouds of metal particles"},
+            {min: 8, max: 14, feature: () => "Crystalline rains"},
+            {min: 15, max: 21, feature: () => "Floating glaciers"},
+            {min: 22, max: 28, feature: () => "Floating islands"},
+            {min: 29, max: 35, feature: () => "Layers of suspended liquid"},
+            {min: 36, max: 42, feature: () => "Pockets of explosive gasses"},
+            {min: 43, max: 49, feature: () => "Powerful vortexes"},
+            {min: 50, max: 56, feature: () => "Radiation fields"},
+            {min: 57, max: 63, feature: () => "Storm-swept rocky debris"},
+            {min: 64, max: 70, feature: () => "Torrential rain"},
+            {min: 71, max: 77, feature: () => "Towering thunderheads"},
+            {min: 78, max: 84, feature: () => "Violent turbulence"},
+            {min: 85, max: 91, feature: () => "Zones of localized atmosphere"},
+            {min: 92, max: 98, feature: () => getDescriptorAndFocus()},
+            {min: 99, max: 100, feature: () => "Precursor Vault (planetside)"}
+        ],
+        life: [
+            {min: 1, max: 50, life: "None"},
+            {min: 51, max: 55, life: "Extinct"},
+            {min: 56, max: 75, life: "Scarce"},
+            {min: 76, max: 90, life: "Diverse"},
+            {min: 91, max: 97, life: "Bountiful"},
+            {min: 98, max: 100, life: "Overrun"}
+        ]
     }
 ];

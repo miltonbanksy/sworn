@@ -465,5 +465,144 @@ const planetary_class = [
             {min: 91, max: 97, life: "Bountiful"},
             {min: 98, max: 100, life: "Overrun"}
         ]
+    },
+    {
+        min: 65, max: 70,
+        pClass: "Jungle World",
+        pDescription: "A humid, rain-soaked planet that keeps its secrets under a thick canopy of vegetation.",
+        pAtmos: [
+            {min: 1, max: 25, aDescription: "Toxic"},
+            {min: 26, max: 30, aDescription: "Corrosive"},
+            {min: 31, max: 60, aDescription: "Marginal"},
+            {min: 61, max: 90, aDescription: "Breathable"},
+            {min: 91, max: 100, aDescription: "Ideal"}
+        ],
+        pSettlements_terminus: [
+            {min: 1, max: 40, sDescription: "None"},
+            {min: 41, max: 55, sDescription: "Orbital settlement"},
+            {min: 56, max: 80, sDescription: "Planetside settlement"},
+            {min: 81, max: 92, sDescription: "Multiple settlements"},
+            {min: 93, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_outlands: [
+            {min: 1, max: 65, sDescription: "None"},
+            {min: 66, max: 75, sDescription: "Orbital settlement"},
+            {min: 76, max: 92, sDescription: "Planetside settlement"},
+            {min: 93, max: 97, sDescription: "Multiple settlements"},
+            {min: 98, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_expanse: [
+            {min: 1, max: 85, sDescription: "None"},
+            {min: 86, max: 90, sDescription: "Orbital settlement"},
+            {min: 91, max: 97, sDescription: "Planetside settlement"},
+            {min: 98, max: 99, sDescription: "Multiple settlements"},
+            {min: 100, max: 100, sDescription: "Settlements in conflict"}
+        ],
+        observed_from_space: [
+            {min: 1, max: 11, "observed": () => "Cloud-breaching trees"},
+            {min: 12, max: 22, "observed": () => "Expansive rivers or wetlands"},
+            {min: 23, max: 33, "observed": () => "Inland seas"},
+            {min: 34, max: 44, "observed": () => "Massive canyons"},
+            {min: 45, max: 55, "observed": () => "Persistent cloud cover"},
+            {min: 56, max: 66, "observed": () => "Towering mountains"},
+            {min: 67, max: 77, "observed": () => "Unbroken canopy"},
+            {min: 78, max: 88, "observed": () => "Unusual vegetation cover"},
+            {min: 89, max: 98, "observed": () => getDescriptorAndFocus()},
+            {min: 99, max: 100, "observed": () => "Precursor Vault (orbital)"}
+        ],
+        planetside_features: [
+            {min: 1, max: 7, feature: () => "Bioluminescent flora"},
+            {min: 8, max: 14, feature: () => "Deep river gorges"},
+            {min: 15, max: 21, feature: () => "Extensive exposed root systems"},
+            {min: 22, max: 28, feature: () => "Immense tiered waterfalls"},
+            {min: 29, max: 35, feature: () => "Languid rivers"},
+            {min: 36, max: 42, feature: () => "Low-lying fog"},
+            {min: 43, max: 49, feature: () => "Plunging sinkholes"},
+            {min: 50, max: 56, feature: () => "Scarred clearings"},
+            {min: 57, max: 63, feature: () => "Sinking quagmires"},
+            {min: 64, max: 70, feature: () => "Surging rivers"},
+            {min: 71, max: 77, feature: () => "Torrential rainstorms"},
+            {min: 78, max: 84, feature: () => "Violent electrical storms"},
+            {min: 85, max: 91, feature: () => "Waterlogged caves"},
+            {min: 92, max: 98, feature: () => getDescriptorAndFocus()},
+            {min: 99, max: 100, feature: () => "Precursor Vault (planetside)"}
+        ],
+        life: [
+            {min: 1, max: 5, life: "Scarce"},
+            {min: 6, max: 35, life: "Diverse"},
+            {min: 36, max: 75, life: "Bountiful"},
+            {min: 76, max: 100, life: "Overrun"}
+        ]
+    },
+    {
+        min: 71, max: 75,
+        pClass: "Ocean World",
+        pDescription: "A planet completely or almost entirely covered by a boundless ocean.",
+        pAtmos: [
+            {min: 1, max: 5, aDescription: "None / thin"},
+            {min: 6, max: 20, aDescription: "Toxic"},
+            {min: 21, max: 25, aDescription: "Corrosive"},
+            {min: 26, max: 60, aDescription: "Marginal"},
+            {min: 61, max: 90, aDescription: "Breathable"},
+            {min: 91, max: 100, aDescription: "Ideal"}
+        ],
+        pSettlements_terminus: [
+            {min: 1, max: 40, sDescription: "None"},
+            {min: 41, max: 55, sDescription: "Orbital settlement"},
+            {min: 56, max: 80, sDescription: "Planetside settlement"},
+            {min: 81, max: 92, sDescription: "Multiple settlements"},
+            {min: 93, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_outlands: [
+            {min: 1, max: 65, sDescription: "None"},
+            {min: 66, max: 75, sDescription: "Orbital settlement"},
+            {min: 76, max: 92, sDescription: "Planetside settlement"},
+            {min: 93, max: 97, sDescription: "Multiple settlements"},
+            {min: 98, max: 100, sDescription: "Settlements in conflict"},
+        ],
+        pSettlements_expanse: [
+            {min: 1, max: 85, sDescription: "None"},
+            {min: 86, max: 90, sDescription: "Orbital settlement"},
+            {min: 91, max: 97, sDescription: "Planetside settlement"},
+            {min: 98, max: 99, sDescription: "Multiple settlements"},
+            {min: 100, max: 100, sDescription: "Settlements in conflict"}
+        ],
+        observed_from_space: [
+            {min: 1, max: 11, "observed": () => "Complex reef systems"},
+            {min: 12, max: 22, "observed": () => "Emerging volcanoes"},
+            {min: 23, max: 33, "observed": () => "Floating forests"},
+            {min: 34, max: 44, "observed": () => "Global hurricanes"},
+            {min: 45, max: 55, "observed": () => "Large moon and strong tides"},
+            {min: 56, max: 66, "observed": () => "Scattered Islands"},
+            {min: 67, max: 77, "observed": () => "Semi-frozen oceans"},
+            {min: 78, max: 88, "observed": () => "Unusual water color"},
+            {min: 89, max: 98, "observed": () => getDescriptorAndFocus()},
+            {min: 99, max: 100, "observed": () => "Precursor Vault (orbital)"}
+        ],
+        planetside_features: [
+            {min: 1, max: 7, feature: () => "Abyssal trenches"},
+            {min: 8, max: 14, feature: () => "Living islands"},
+            {min: 15, max: 21, feature: () => "Luminescent seas"},
+            {min: 22, max: 28, feature: () => "Roaming icebergs"},
+            {min: 29, max: 35, feature: () => "Shallow-water plains"},
+            {min: 36, max: 42, feature: () => "Subsurface volcanoes"},
+            {min: 43, max: 49, feature: () => "Titanic waves"},
+            {min: 50, max: 56, feature: () => "Undersea air pockets"},
+            {min: 57, max: 63, feature: () => "Undersea caves"},
+            {min: 64, max: 70, feature: () => "Undersea forests"},
+            {min: 71, max: 77, feature: () => "Unrelenting rainfall"},
+            {min: 78, max: 84, feature: () => "Violent currents"},
+            {min: 85, max: 91, feature: () => "Windborne waterspouts"},
+            {min: 92, max: 98, feature: () => getDescriptorAndFocus()},
+            {min: 99, max: 100, feature: () => "Precursor Vault (planetside)"}
+        ],
+        life: [
+            {min: 1, max: 5, life: "None"},
+            {min: 6, max: 15, life: "Extinct"},
+            {min: 16, max: 30, life: "Scarce"},
+            {min: 31, max: 60, life: "Diverse"},
+            {min: 61, max: 90, life: "Bountiful"},
+            {min: 91, max: 100, life: "Overrun"}
+        ]
     }
 ];

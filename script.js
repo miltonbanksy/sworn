@@ -173,14 +173,27 @@ function getPlanetLife(planet) {
 
 function getPlanetDiversity(planet) {
     if (Object.hasOwn(planet, "diversity")) {
-        return "I haven't added this yet."; 
+        const roll = roll_1d100();
+        const planet_diversity = planet.diversity.find(s => roll >= s.min && roll <= s.max);
+        return planet_diversity;
     } else {
         return "None";
     }
 }
 
+function getPlanetBiomes(planet, planet_biomes_amount) {
+    const array_biomes = [];
+    for (let x = 1; x <= planet_biomes_amount; x++) {
+        const roll = roll_1d100();
+        const biome = planet.biomes.find(s => roll >= s.min && roll <= s.max);
+        array_biomes.push(biome.biome);
+    }
+    return array_biomes;
+}
+
 function getPlanet() {
     const roll = roll_1d100();
+    // TEST LINE const roll = 100;
     const planet = planetary_class.find(s => roll >= s.min && roll <= s.max);
 
     const planet_atmos = getPlanetAtmos(planet);
@@ -188,7 +201,11 @@ function getPlanet() {
     const planet_feature = getPlanetFeature(planet);
     const planet_life = getPlanetLife(planet);
     const planet_diversity = getPlanetDiversity(planet);
+    const planet_biomes_amount = planet_diversity.biomes;
+    const planet_biomes = getPlanetBiomes(planet, planet_biomes_amount);
 
+    // I should prevent the same biome being picked more than once.
+    
     displayRndPlanet.innerHTML = `
     TYPE: ${planet.pClass}
     <br><br>DESCRIPTION: ${planet.pDescription}
@@ -196,6 +213,7 @@ function getPlanet() {
     <br><br>OBSERVED FROM SPACE: ${planet_observed()}
     <br><br>PLANETSIDE FEATURE: ${planet_feature()}
     <br><br>LIFE: ${planet_life}
-    <br><br>BIOMES: ${planet_diversity}
+    <br><br>DIVERSITY: ${planet_diversity.diversity || "None"}
+    <br><br>BIOMES: ${planet_biomes.join(", ") || "None"}
     `;
 }

@@ -146,19 +146,19 @@ const planetary_class = [
             {min: 51, max: 60, sDescription: "Orbital settlement"},
             {min: 61, max: 80, sDescription: "Planetside settlement"},
             {min: 81, max: 92, sDescription: "Multiple settlements"},
-            {min: 93, max: 100, sDescription: "Settlements in conflict"},
+            {min: 93, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_outlands: [
             {min: 1, max: 75, sDescription: "None"},
             {min: 76, max: 83, sDescription: "Orbital settlement"},
             {min: 84, max: 95, sDescription: "Planetside settlement"},
             {min: 96, max: 98, sDescription: "Multiple settlements"},
-            {min: 99, max: 100, sDescription: "Settlements in conflict"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_expanse: [
             {min: 1, max: 90, sDescription: "None"},
             {min: 91, max: 96, sDescription: "Orbital settlement"},
-            {min: 97, max: 100, sDescription: "Planetside settlement"},
+            {min: 97, max: 100, sDescription: "Planetside settlement"}
         ],
         observed_from_space: [
             {min: 1, max: 11, "observed": () => "Dry seabeds"},
@@ -214,19 +214,19 @@ const planetary_class = [
             {min: 61, max: 75, sDescription: "Orbital settlement"},
             {min: 76, max: 87, sDescription: "Planetside settlement"},
             {min: 88, max: 96, sDescription: "Multiple settlements"},
-            {min: 97, max: 100, sDescription: "Settlements in conflict"},
+            {min: 97, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_outlands: [
             {min: 1, max: 85, sDescription: "None"},
             {min: 86, max: 92, sDescription: "Orbital settlement"},
             {min: 93, max: 97, sDescription: "Planetside settlement"},
             {min: 98, max: 99, sDescription: "Multiple settlements"},
-            {min: 100, max: 100, sDescription: "Settlements in conflict"},
+            {min: 100, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_expanse: [
             {min: 1, max: 95, sDescription: "None"},
             {min: 96, max: 98, sDescription: "Orbital settlement"},
-            {min: 99, max: 100, sDescription: "Planetside settlement"},
+            {min: 99, max: 100, sDescription: "Planetside settlement"}
         ],
         observed_from_space: [
             {min: 1, max: 11, "observed": () => "Fiery world-spanning chasms"},
@@ -282,7 +282,7 @@ const planetary_class = [
             {min: 81, max: 90, sDescription: "Orbital settlement"},
             {min: 91, max: 95, sDescription: "Planetside settlement"},
             {min: 96, max: 98, sDescription: "Multiple settlements"},
-            {min: 99, max: 100, sDescription: "Settlements in conflict"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_outlands: [
             {min: 1, max: 90, sDescription: "None"},
@@ -292,7 +292,7 @@ const planetary_class = [
         pSettlements_expanse: [
             {min: 1, max: 95, sDescription: "None"},
             {min: 96, max: 98, sDescription: "Orbital settlement"},
-            {min: 99, max: 100, sDescription: "Planetside settlement"},
+            {min: 99, max: 100, sDescription: "Planetside settlement"}
         ],
         observed_from_space: [
             {min: 1, max: 11, "observed": () => "Broken moon"},
@@ -347,19 +347,19 @@ const planetary_class = [
             {min: 51, max: 60, sDescription: "Orbital settlement"},
             {min: 61, max: 80, sDescription: "Planetside settlement"},
             {min: 81, max: 92, sDescription: "Multiple settlements"},
-            {min: 93, max: 100, sDescription: "Settlements in conflict"},
+            {min: 93, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_outlands: [
             {min: 1, max: 75, sDescription: "None"},
             {min: 76, max: 83, sDescription: "Orbital settlement"},
             {min: 84, max: 95, sDescription: "Planetside settlement"},
             {min: 96, max: 98, sDescription: "Multiple settlements"},
-            {min: 99, max: 100, sDescription: "Settlements in conflict"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_expanse: [
             {min: 1, max: 90, sDescription: "None"},
             {min: 91, max: 96, sDescription: "Orbital settlement"},
-            {min: 97, max: 100, sDescription: "Planetside settlement"},
+            {min: 97, max: 100, sDescription: "Planetside settlement"}
         ],
         observed_from_space: [
             {min: 1, max: 11, "observed": () => "Feeble sunlight"},
@@ -414,19 +414,19 @@ const planetary_class = [
             {min: 51, max: 70, sDescription: "Orbital settlement"},
             {min: 71, max: 85, sDescription: "Planetside settlement"},
             {min: 86, max: 95, sDescription: "Multiple settlements"},
-            {min: 96, max: 100, sDescription: "Settlements in conflict"},
+            {min: 96, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_outlands: [
             {min: 1, max: 75, sDescription: "None"},
             {min: 76, max: 87, sDescription: "Orbital settlement"},
             {min: 88, max: 95, sDescription: "Planetside settlement"},
             {min: 96, max: 98, sDescription: "Multiple settlements"},
-            {min: 99, max: 100, sDescription: "Settlements in conflict"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_expanse: [
             {min: 1, max: 90, sDescription: "None"},
             {min: 91, max: 96, sDescription: "Orbital settlement"},
-            {min: 97, max: 100, sDescription: "Planetside settlement"},
+            {min: 97, max: 100, sDescription: "Planetside settlement"}
         ],
         observed_from_space: [
             {min: 1, max: 11, "observed": () => "Complex ring system"},
@@ -482,14 +482,14 @@ const planetary_class = [
             {min: 41, max: 55, sDescription: "Orbital settlement"},
             {min: 56, max: 80, sDescription: "Planetside settlement"},
             {min: 81, max: 92, sDescription: "Multiple settlements"},
-            {min: 93, max: 100, sDescription: "Settlements in conflict"},
+            {min: 93, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_outlands: [
             {min: 1, max: 65, sDescription: "None"},
             {min: 66, max: 75, sDescription: "Orbital settlement"},
             {min: 76, max: 92, sDescription: "Planetside settlement"},
             {min: 93, max: 97, sDescription: "Multiple settlements"},
-            {min: 98, max: 100, sDescription: "Settlements in conflict"},
+            {min: 98, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_expanse: [
             {min: 1, max: 85, sDescription: "None"},
@@ -551,14 +551,14 @@ const planetary_class = [
             {min: 41, max: 55, sDescription: "Orbital settlement"},
             {min: 56, max: 80, sDescription: "Planetside settlement"},
             {min: 81, max: 92, sDescription: "Multiple settlements"},
-            {min: 93, max: 100, sDescription: "Settlements in conflict"},
+            {min: 93, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_outlands: [
             {min: 1, max: 65, sDescription: "None"},
             {min: 66, max: 75, sDescription: "Orbital settlement"},
             {min: 76, max: 92, sDescription: "Planetside settlement"},
             {min: 93, max: 97, sDescription: "Multiple settlements"},
-            {min: 98, max: 100, sDescription: "Settlements in conflict"},
+            {min: 98, max: 100, sDescription: "Settlements in conflict"}
         ],
         pSettlements_expanse: [
             {min: 1, max: 85, sDescription: "None"},
@@ -603,6 +603,295 @@ const planetary_class = [
             {min: 31, max: 60, life: "Diverse"},
             {min: 61, max: 90, life: "Bountiful"},
             {min: 91, max: 100, life: "Overrun"}
+        ]
+    },
+    {
+        min: 76, max: 90,
+        pClass: "Rocky World",
+        pDescription: "A rugged planet scarred by eons of destructive asteroid impacts.",
+        pAtmos: [
+            {min: 1, max: 65, aDescription: "None / Thin"},
+            {min: 66, max: 85, aDescription: "Toxic"},
+            {min: 86, max: 90, aDescription: "Corrosive"},
+            {min: 91, max: 100, aDescription: "Marginal"}
+        ],
+        pSettlements_terminus: [
+            {min: 1, max: 50, sDescription: "None"},
+            {min: 51, max: 70, sDescription: "Orbital settlement"},
+            {min: 71, max: 85, sDescription: "Planetside settlement"},
+            {min: 86, max: 95, sDescription: "Multiple settlements"},
+            {min: 96, max: 100, sDescription: "Settlements in conflict"}
+        ],
+        pSettlements_outlands: [
+            {min: 1, max: 75, sDescription: "None"},
+            {min: 76, max: 87, sDescription: "Orbital settlement"},
+            {min: 88, max: 95, sDescription: "Planetside settlement"},
+            {min: 96, max: 98, sDescription: "Multiple settlements"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"}
+        ],
+        pSettlements_expanse: [
+            {min: 1, max: 90, sDescription: "None"},
+            {min: 91, max: 96, sDescription: "Orbital settlement"},
+            {min: 97, max: 100, sDescription: "Planetside settlement"}
+        ],
+        observed_from_space: [
+            {min: 1, max: 11, "observed": () => "Barren plains"},
+            {min: 12, max: 22, "observed": () => "Constant asteroid strikes"},
+            {min: 23, max: 33, "observed": () => "Dense ring system"},
+            {min: 34, max: 44, "observed": () => "Jagged mountains"},
+            {min: 45, max: 55, "observed": () => "Massive impact crater"},
+            {min: 56, max: 66, "observed": () => "Misshapen form (low gravity)"},
+            {min: 67, max: 77, "observed": () => "Perpetual night"},
+            {min: 78, max: 88, "observed": () => "Towering plateaus"},
+            {min: 89, max: 98, "observed": () => getDescriptorAndFocus()},
+            {min: 99, max: 100, "observed": () => "Precursor Vault (orbital)"}
+        ],
+        planetside_features: [
+            {min: 1, max: 7, feature: () => "Crystalline formations"},
+            {min: 8, max: 14, feature: () => "Crystalline caves"},
+            {min: 15, max: 21, feature: () => "Exposed mineral deposits"},
+            {min: 22, max: 28, feature: () => "Geometric terrain features"},
+            {min: 29, max: 35, feature: () => "Geothermal vents"},
+            {min: 36, max: 42, feature: () => "Glassy impact craters"},
+            {min: 43, max: 49, feature: () => "Massive dust dunes"},
+            {min: 50, max: 56, feature: () => "Powerful magnetic fields"},
+            {min: 57, max: 63, feature: () => "Rubble-strewn lava fields"},
+            {min: 64, max: 70, feature: () => "Steam-heated caves"},
+            {min: 71, max: 77, feature: () => "Subsurface magma flows"},
+            {min: 78, max: 84, feature: () => "Swirling low-lying gases"},
+            {min: 85, max: 91, feature: () => "Towering rocky spires"},
+            {min: 92, max: 98, feature: () => getDescriptorAndFocus()},
+            {min: 99, max: 100, feature: () => "Precursor Vault (planetside)"}
+        ],
+        life: [
+            {min: 1, max: 65, life: "None"},
+            {min: 66, max: 80, life: "Extinct"},
+            {min: 81, max: 90, life: "Scarce"},
+            {min: 91, max: 95, life: "Diverse"},
+            {min: 96, max: 98, life: "Bountiful"},
+            {min: 99, max: 100, life: "Overrun"}
+        ]
+    },
+    {
+        min: 91, max: 92,
+        pClass: "Shattered World",
+        pDescription: "A planet sundered by cataclysmic destruction.",
+        pAtmos: [
+            {min: 1, max: 93, aDescription: "None / Thin"},
+            {min: 94, max: 95, aDescription: "Toxic"},
+            {min: 96, max: 97, aDescription: "Corrosive"},
+            {min: 98, max: 99, aDescription: "Marginal"},
+            {min: 100, max: 100, aDescription: "Breathable"}
+        ],
+        pSettlements_terminus: [
+            {min: 1, max: 70, sDescription: "None"},
+            {min: 71, max: 90, sDescription: "Orbital settlement"},
+            {min: 91, max: 95, sDescription: "Planetside settlement"},
+            {min: 96, max: 98, sDescription: "Multiple settlements"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"}
+        ],
+        pSettlements_outlands: [
+            {min: 1, max: 85, sDescription: "None"},
+            {min: 86, max: 96, sDescription: "Orbital settlement"},
+            {min: 97, max: 99, sDescription: "Planetside settlement"},
+            {min: 100, max: 100, sDescription: "Multiple settlements"}
+        ],
+        pSettlements_expanse: [
+            {min: 1, max: 95, sDescription: "None"},
+            {min: 96, max: 99, sDescription: "Orbital settlement"},
+            {min: 100, max: 100, sDescription: "Planetside settlement"}
+        ],
+        observed_from_space: [
+            {min: 1, max: 11, "observed": () => "Demolished space fleet"},
+            {min: 12, max: 22, "observed": () => "Dense ring system"},
+            {min: 23, max: 33, "observed": () => "Fiery planetary core"},
+            {min: 34, max: 44, "observed": () => "Geomagnetic storms"},
+            {min: 45, max: 55, "observed": () => "Intense solar radiation"},
+            {min: 56, max: 66, "observed": () => "Preserved planetary fragment"},
+            {min: 67, max: 77, "observed": () => "Swirling debris field"},
+            {min: 78, max: 88, "observed": () => "Unbroken moon"},
+            {min: 89, max: 98, "observed": () => getDescriptorAndFocus()},
+            {min: 99, max: 100, "observed": () => "Precursor Vault (orbital)"}
+        ],
+        planetside_features: [
+            {min: 1, max: 7, feature: () => "Broken cities"},
+            {min: 8, max: 14, feature: () => "Colliding fragments"},
+            {min: 15, max: 21, feature: () => "Energy storms"},
+            {min: 22, max: 28, feature: () => "Exposed caverns"},
+            {min: 29, max: 35, feature: () => "Fluctuating gravity"},
+            {min: 36, max: 42, feature: () => "Magnetic disturbances"},
+            {min: 43, max: 49, feature: () => "Molten fissures"},
+            {min: 50, max: 56, feature: () => "Phantom vision s of the past"},
+            {min: 57, max: 63, feature: () => "Pocket atmosphere"},
+            {min: 64, max: 70, feature: () => "Residual energy storms"},
+            {min: 71, max: 77, feature: () => "Swirling corrosive gases"},
+            {min: 78, max: 84, feature: () => "Unstable and fracturing terrain"},
+            {min: 85, max: 91, feature: () => "Venting magma"},
+            {min: 92, max: 98, feature: () => getDescriptorAndFocus()},
+            {min: 99, max: 100, feature: () => "Precursor Vault (planetside)"}
+        ],
+        life: [
+            {min: 1, max: 30, life: "None"},
+            {min: 31, max: 85, life: "Extinct"},
+            {min: 86, max: 95, life: "Scarce"},
+            {min: 96, max: 100, life: "Diverse"}
+        ]
+    },
+    {
+        min: 93, max: 98,
+        pClass: "Tainted World",
+        pDescription: "A foul planet wracked by a poisonous climate and virulent growths.",
+        pAtmos: [
+            {min: 1, max: 65, aDescription: "Toxic"},
+            {min: 66, max: 85, aDescription: "Corrosive"},
+            {min: 86, max: 95, aDescription: "Marginal"},
+            {min: 96, max: 100, aDescription: "Breathable"}
+        ],
+        pSettlements_terminus: [
+            {min: 1, max: 80, sDescription: "None"},
+            {min: 81, max: 90, sDescription: "Orbital settlement"},
+            {min: 91, max: 95, sDescription: "Planetside settlement"},
+            {min: 96, max: 98, sDescription: "Multiple settlements"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"}
+        ],
+        pSettlements_outlands: [
+            {min: 1, max: 90, sDescription: "None"},
+            {min: 91, max: 97, sDescription: "Orbital settlement"},
+            {min: 98, max: 100, sDescription: "Planetside settlement"}
+        ],
+        pSettlements_expanse: [
+            {min: 1, max: 95, sDescription: "None"},
+            {min: 96, max: 98, sDescription: "Orbital settlement"},
+            {min: 99, max: 100, sDescription: "Planetside settlement"}
+        ],
+        observed_from_space: [
+            {min: 1, max: 11, "observed": () => "Expansive fungal plains"},
+            {min: 12, max: 22, "observed": () => "Fungal forests"},
+            {min: 23, max: 33, "observed": () => "Scabrous, infected terrain"},
+            {min: 34, max: 44, "observed": () => "Sky-breaching fungus"},
+            {min: 45, max: 55, "observed": () => "Sludge-filled river networks"},
+            {min: 56, max: 66, "observed": () => "Stagnant cloud cover"},
+            {min: 67, max: 77, "observed": () => "Thick, murky atmosphere"},
+            {min: 78, max: 88, "observed": () => "Toxic seas"},
+            {min: 89, max: 98, "observed": () => getDescriptorAndFocus()},
+            {min: 99, max: 100, "observed": () => "Precursor Vault (orbital)"}
+        ],
+        planetside_features: [
+            {min: 1, max: 7, feature: () => "Caustic gas storms"},
+            {min: 8, max: 14, feature: () => "Corrosive, low-lying fog"},
+            {min: 15, max: 21, feature: () => "Fungus-encrusted caves"},
+            {min: 22, max: 28, feature: () => "Gelatinous ponds"},
+            {min: 29, max: 35, feature: () => "Hallucinogenic toxins"},
+            {min: 36, max: 42, feature: () => "Layers of fast-growing lichen"},
+            {min: 43, max: 49, feature: () => "Moldering bones"},
+            {min: 50, max: 56, feature: () => "Mutated flora"},
+            {min: 57, max: 63, feature: () => "Poisonous gas vents"},
+            {min: 64, max: 70, feature: () => "Spore clouds"},
+            {min: 71, max: 77, feature: () => "Terrain marred by fleshy pustules"},
+            {min: 78, max: 84, feature: () => "Toxic rain"},
+            {min: 85, max: 91, feature: () => "Virulent fungal infestations"},
+            {min: 92, max: 98, feature: () => getDescriptorAndFocus()},
+            {min: 99, max: 100, feature: () => "Precursor Vault (planetside)"}
+        ],
+        life: [
+            {min: 1, max: 10, life: "Scarce"},
+            {min: 11, max: 35, life: "Diverse"},
+            {min: 36, max: 65, life: "Bountiful"},
+            {min: 66, max: 100, life: "Overrun"}
+        ]
+    },
+    {
+        min: 90, max: 100,
+        pClass: "Vital World",
+        pDescription: "This diverse, lifebearing planet might provide some small measure of hope.",
+        pAtmos: [
+            {min: 1, max: 20, aDescription: "Marginal"},
+            {min: 21, max: 50, aDescription: "Breathable"},
+            {min: 51, max: 100, aDescription: "Ideal"}
+        ],
+        pSettlements_terminus: [
+            {min: 1, max: 20, sDescription: "None"},
+            {min: 21, max: 30, sDescription: "Orbital settlement"},
+            {min: 31, max: 70, sDescription: "Planetside settlement"},
+            {min: 71, max: 90, sDescription: "Multiple settlements"},
+            {min: 91, max: 100, sDescription: "Settlements in conflict"}
+        ],
+        pSettlements_outlands: [
+            {min: 1, max: 50, sDescription: "None"},
+            {min: 51, max: 55, sDescription: "Orbital settlement"},
+            {min: 56, max: 85, sDescription: "Planetside settlement"},
+            {min: 86, max: 95, sDescription: "Multiple settlements"},
+            {min: 96, max: 100, sDescription: "Settlements in conflict"}
+        ],
+        pSettlements_expanse: [
+            {min: 1, max: 80, sDescription: "None"},
+            {min: 81, max: 83, sDescription: "Orbital settlement"},
+            {min: 84, max: 93, sDescription: "Planetside settlement"},
+            {min: 94, max: 98, sDescription: "Multiple settlements"},
+            {min: 99, max: 100, sDescription: "Settlements in conflict"}
+        ],
+        observed_from_space: [
+            {min: 1, max: 11, "observed": () => "Complex ring system"},
+            {min: 12, max: 22, "observed": () => "Dramatic seasonal variation"},
+            {min: 23, max: 33, "observed": () => "High gravity"},
+            {min: 34, max: 44, "observed": () => "Large moon"},
+            {min: 45, max: 55, "observed": () => "Narrow livable band"},
+            {min: 56, max: 66, "observed": () => "Numerous small moons"},
+            {min: 67, max: 77, "observed": () => "Unusual day or night cycle"},
+            {min: 78, max: 88, "observed": () => "Vibrant colored landscapes"},
+            {min: 89, max: 98, "observed": () => getDescriptorAndFocus()},
+            {min: 99, max: 100, "observed": () => "Precursor Vault (orbital)"}
+        ],
+        planetside_features: [
+            {min: 1, max: 7, feature: () => "Background radiation"},
+            {min: 8, max: 14, feature: () => "Chaotically juxtaposed biomes"},
+            {min: 15, max: 21, feature: () => "Creature boneyards"},
+            {min: 22, max: 28, feature: () => "Creature lairs or watering holes"},
+            {min: 29, max: 35, feature: () => "Crystalline formations"},
+            {min: 36, max: 42, feature: () => "Fierce electrical storms"},
+            {min: 43, max: 49, feature: () => "Floating terrain"},
+            {min: 50, max: 56, feature: () => "Frequent seismic activity"},
+            {min: 57, max: 63, feature: () => "Magnetic disturbances"},
+            {min: 64, max: 70, feature: () => "Scarred or excavated terrain"},
+            {min: 71, max: 77, feature: () => "Signs of an engineered biosphere"},
+            {min: 78, max: 84, feature: () => "Sudden weather fluctuations"},
+            {min: 85, max: 91, feature: () => "Towering geological formations"},
+            {min: 92, max: 98, feature: () => getDescriptorAndFocus()},
+            {min: 99, max: 100, feature: () => "Precursor Vault (planetside)"}
+        ],
+        life: [
+            {min: 1, max: 10, life: "Scarce"},
+            {min: 11, max: 45, life: "Diverse"},
+            {min: 46, max: 85, life: "Bountiful"},
+            {min: 86, max: 100, life: "Overrun"}
+        ],
+        diversity: [
+            {min: 1, max: 20, biomes: 2, diversity: "Simple (two biomes)"},
+            {min: 21, max: 70, biomes: 3, diversity: "Diverse (three biomes)"},
+            {min: 71, max: 90, biomes: 4, diversity: "Complex (four biomes)"},
+            {min: 91, max: 100, biomes: 5, diversity: "Garden world (five or more biomes)"}
+        ],
+        biomes: [
+            {min: 1, max: 5, biome: "Caves"},
+            {min: 6, max: 10, biome: "Cold forest"},
+            {min: 11, max: 15, biome: "Fungal"},
+            {min: 16, max: 20, biome: "Glacial or snow"},
+            {min: 21, max: 25, biome: "Grassland"},
+            {min: 26, max: 30, biome: "Islands"},
+            {min: 31, max: 35, biome: "Jungle"},
+            {min: 36, max: 40, biome: "Mountainous"},
+            {min: 41, max: 45, biome: "Ocean"},
+            {min: 46, max: 50, biome: "Rocky desert"},
+            {min: 51, max: 55, biome: "Sandy desert"},
+            {min: 56, max: 60, biome: "Savanna"},
+            {min: 61, max: 65, biome: "Shallow seas"},
+            {min: 66, max: 70, biome: "Shrubland"},
+            {min: 71, max: 75, biome: "Temperate rainforest"},
+            {min: 76, max: 80, biome: "Temperate forest"},
+            {min: 81, max: 85, biome: "Tundra"},
+            {min: 86, max: 90, biome: "Volcanic"},
+            {min: 91, max: 95, biome: "Waterways"},
+            {min: 96, max: 100, biome: "Wetland"}
         ]
     }
 ];

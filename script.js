@@ -145,7 +145,17 @@ const displayRndPlanet = document.querySelector('#display-rnd-planet');
 
 btnRndPlanet.addEventListener('click', () => {
     getPlanet();
+    const planet_atmos = getWorldElement(planet, planet_atmos);
+    
 });
+
+// helper function to generate world elements
+function getWorldElement(planet, planetKeys) {
+    const roll = roll_1d100();
+    const planetKey = planet.planetKeys.find(s => roll >= s.min && roll <= s.max);
+    return planetValue;
+}
+
 
 function getPlanetAtmos(planet) {
     const roll = roll_1d100();

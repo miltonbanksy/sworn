@@ -94,7 +94,7 @@ setupAssetsDisplay(array_modules, "#display-modules", "#display-random-module", 
 setupAssetsDisplay(array_support_vehicles, "#display-vehicles", "#display-random-vehicle", "#btn-random-vehicle");
 setupAssetsDisplay(array_companions, "#display-companions", "#display-random-companion", "#btn-random-companion");
 
-
+// I might get rid of this soon...
 // Create a helper function here for all functions below:
 function displayDataFromTableBasedOnDiceRoll(data, value, buttonSelector, displaySelector) {
     const btnRnd = document.querySelector(buttonSelector);
@@ -118,17 +118,30 @@ function generateSettlement(data) {
     return data.find(s => roll >= s.min && roll <= s.max);
 }
 
+// Stuck here!
+// 
+function generateSettlementProjects() {
+    let array_projects = [];
+    for (let x = 1; x <= 2; x++) {
+        const roll = roll_1d100();
+        const project = settlement.projects.find(s => roll >= s.min && roll <= s.max);
+        array_projects.push(project.project);
+    }
+    console.log(array_projects)
+    return array_projects;
+}
+
 btnRndSettlement.addEventListener('click', () => {
     const settlement_location = generateSettlement(settlement.location);
     const settlement_authority = generateSettlement(settlement.authority);
-    // const settlement_projects = ...
+    const settlement_projects = generateSettlementProjects();
 
     displayRndSettlement.innerHTML = `
     SETTLEMENT NAME: 
     <br><br>LOCATION: ${settlement_location.location()}
     <br><br>POPULATION: 
     <br><br>AUTHORITY: ${settlement_authority.authority()}
-    <br><br>PROJECTS: 
+    <br><br>PROJECTS: ${settlement_projects}
     `;
 });
 

@@ -108,6 +108,30 @@ function displayDataFromTableBasedOnDiceRoll(data, value, buttonSelector, displa
     });
 }
 
+// Working on a new re-factored function
+// to display all Settlement details with one button click.
+const btnRndSettlement = document.querySelector('#btn-rnd-settlement');
+const displayRndSettlement = document.querySelector('#display-rnd-settlement');
+
+function generateSettlement(data) {
+    const roll = roll_1d100();
+    return data.find(s => roll >= s.min && roll <= s.max);
+}
+
+btnRndSettlement.addEventListener('click', () => {
+    const settlement_location = generateSettlement(settlement.location);
+    const settlement_authority = generateSettlement(settlement.authority);
+    // const settlement_projects = ...
+
+    displayRndSettlement.innerHTML = `
+    SETTLEMENT NAME: 
+    <br><br>LOCATION: ${settlement_location.location()}
+    <br><br>POPULATION: 
+    <br><br>AUTHORITY: ${settlement_authority.authority()}
+    <br><br>PROJECTS: 
+    `;
+});
+
 displayDataFromTableBasedOnDiceRoll(settlement_location, 'location', '#btn-rnd-settlement-location', '#display-rnd-settlement-location');
 displayDataFromTableBasedOnDiceRoll(settlement_authority, 'authority', '#btn-rnd-settlement-authority', '#display-rnd-settlement-authority');
 displayDataFromTableBasedOnDiceRoll(settlement_projects, 'project', '#btn-rnd-settlement-project', '#display-rnd-settlement-project');
@@ -147,7 +171,6 @@ const displayRndPlanet = document.querySelector('#display-rnd-planet');
 function getWorldElement(planet, planetKeys) {
     const roll = roll_1d100();
     return planetKey = planet[planetKeys].find(s => roll >= s.min && roll <= s.max);
-    
 }
 
 function getPlanetDiversity(planet) {
@@ -189,5 +212,5 @@ btnRndPlanet.addEventListener('click', () => {
     <br><br>LIFE: ${planet_life.life}
     <br><br>DIVERSITY: ${planet_diversity.diversity || "None"}
     <br><br>BIOMES: ${planet_biomes.join(", ") || "None"}
-   `
+   `;
 });

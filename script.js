@@ -143,42 +143,11 @@ getPrimaryStar();
 const btnRndPlanet = document.querySelector('#btn-rnd-planet');
 const displayRndPlanet = document.querySelector('#display-rnd-planet');
 
-btnRndPlanet.addEventListener('click', () => {
-    getPlanet();
-    const planet_atmos = getWorldElement(planet, planet_atmos);
-    
-});
-
 // helper function to generate world elements
 function getWorldElement(planet, planetKeys) {
     const roll = roll_1d100();
-    const planetKey = planet.planetKeys.find(s => roll >= s.min && roll <= s.max);
-    return planetValue;
-}
-
-
-function getPlanetAtmos(planet) {
-    const roll = roll_1d100();
-    const planet_atmos = planet.pAtmos.find(s => roll >= s.min && roll <= s.max);
-    return planet_atmos.aDescription;
-}
-
-function getPlanetObservedFromSpace(planet) {
-    const roll = roll_1d100();
-    const planet_observed = planet.observed_from_space.find(s => roll >= s.min && roll <= s.max);
-    return planet_observed.observed;
-}
-
-function getPlanetFeature(planet) {
-    const roll = roll_1d100();
-    const planet_feature = planet.planetside_features.find(s => roll >= s.min && roll <= s.max);
-    return planet_feature.feature;
-}
-
-function getPlanetLife(planet) {
-    const roll = roll_1d100();
-    const planet_life = planet.life.find(s => roll >= s.min && roll <= s.max);
-    return planet_life.life;
+    return planetKey = planet[planetKeys].find(s => roll >= s.min && roll <= s.max);
+    
 }
 
 function getPlanetDiversity(planet) {
@@ -201,29 +170,24 @@ function getPlanetBiomes(planet, planet_biomes_amount) {
     return array_biomes;
 }
 
-function getPlanet() {
+btnRndPlanet.addEventListener('click', () => {
     const roll = roll_1d100();
-    // TEST LINE const roll = 100;
     const planet = planetary_class.find(s => roll >= s.min && roll <= s.max);
-
-    const planet_atmos = getPlanetAtmos(planet);
-    const planet_observed = getPlanetObservedFromSpace(planet);
-    const planet_feature = getPlanetFeature(planet);
-    const planet_life = getPlanetLife(planet);
+    const planet_atmos = getWorldElement(planet, "pAtmos");
+    const planet_observed = getWorldElement(planet, "observed_from_space");
+    const planet_feature = getWorldElement(planet, "planetside_features");
+    const planet_life = getWorldElement(planet, "life");
     const planet_diversity = getPlanetDiversity(planet);
     const planet_biomes_amount = planet_diversity.biomes;
     const planet_biomes = getPlanetBiomes(planet, planet_biomes_amount);
-
-    // I should prevent the same biome being picked more than once.
     
     displayRndPlanet.innerHTML = `
     TYPE: ${planet.pClass}
-    <br><br>DESCRIPTION: ${planet.pDescription}
-    <br><br>ATMOSPHERE: ${planet_atmos}
-    <br><br>OBSERVED FROM SPACE: ${planet_observed()}
-    <br><br>PLANETSIDE FEATURE: ${planet_feature()}
-    <br><br>LIFE: ${planet_life}
+    <br><br>ATMOSPHERE: ${planet_atmos.aDescription}
+    <br><br>OBSERVED FROM SPACE: ${planet_observed.observed()}
+    <br><br>PLANETSIDE FEATURE: ${planet_feature.feature()}
+    <br><br>LIFE: ${planet_life.life}
     <br><br>DIVERSITY: ${planet_diversity.diversity || "None"}
     <br><br>BIOMES: ${planet_biomes.join(", ") || "None"}
-    `;
-}
+   `
+});

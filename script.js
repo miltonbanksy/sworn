@@ -118,30 +118,27 @@ function generateSettlement(data) {
     return data.find(s => roll >= s.min && roll <= s.max);
 }
 
-// Stuck here!
-// 
-function generateSettlementProjects() {
-    let array_projects = [];
-    for (let x = 1; x <= 2; x++) {
-        const roll = roll_1d100();
-        const project = settlement.projects.find(s => roll >= s.min && roll <= s.max);
-        array_projects.push(project.project);
-    }
-    console.log(array_projects)
-    return array_projects;
-}
-
 btnRndSettlement.addEventListener('click', () => {
     const settlement_location = generateSettlement(settlement.location);
     const settlement_authority = generateSettlement(settlement.authority);
-    const settlement_projects = generateSettlementProjects();
+    const settlement_project1 = generateSettlement(settlement.projects);
+    const settlement_project2 = generateSettlement(settlement.projects);
+    const settlement_first_look1 = generateSettlement(settlement.first_look);
+    const settlement_first_look2 = generateSettlement(settlement.first_look);
+    const settlement_trouble1 = generateSettlement(settlement.trouble);
+    const settlement_trouble2 = generateSettlement(settlement.trouble);
+
+    const renderItem = (item) => typeof item === 'function' ? item() : item;
+
 
     displayRndSettlement.innerHTML = `
     SETTLEMENT NAME: 
-    <br><br>LOCATION: ${settlement_location.location()}
+    <br><br>LOCATION: ${renderItem(settlement_location.location)}
     <br><br>POPULATION: 
-    <br><br>AUTHORITY: ${settlement_authority.authority()}
-    <br><br>PROJECTS: ${settlement_projects}
+    <br><br>AUTHORITY: ${renderItem(settlement_authority.authority)}
+    <br><br>PROJECTS: ${renderItem(settlement_project1.project)}, ${renderItem(settlement_project2.project)}
+    <br><br>FIRST LOOK: ${renderItem(settlement_first_look1.first_look)}, ${renderItem(settlement_first_look2.first_look)}
+    <br><br>TROUBLE: ${renderItem(settlement_trouble1.trouble)}, ${renderItem(settlement_trouble2.trouble)}
     `;
 });
 

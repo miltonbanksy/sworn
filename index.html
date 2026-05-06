@@ -10,6 +10,24 @@
     <h1>Starforged</h1>
     <h2>💷 Templates</h2>
     <details>
+        <summary>Three Pillars (or "What do I do now?)"</summary>
+        <ol>
+            <li>Quests - Swear & fulfill vows</li>
+            <li>Bonds - Create connections. Build relationships</li>
+            <li>Discoveries - Explore. Unlock mysteries.</li>
+        </ol>
+    </details>
+    <details>
+        <summary>Ranks</summary>
+        <ul>
+            <li>Troublesome, 3 boxes per progress (1 harm)</li>
+            <li>Dangerous, 2 boxes per progress (2 harm)</li>
+            <li>Formidable, 1 box per progress (2 harm)</li>
+            <li>Extreme, 2 ticks per progress (3 harm)</li>
+            <li>Epic, 1 tick per progress (3 harm)</li>
+        </ul>
+    </details>
+    <details>
         <summary>PC Template</summary>
         <ul>
             <div>NAME: , CALLSIGN:</div>
@@ -51,7 +69,7 @@
     </details>
 
     <details>
-        <summary>NPC Template</summary>
+        <summary>Connection Template</summary>
         <ul>
             <div>NAME: , CALLSIGN:</div>
             <div>RELATIONSHIP RANK: </div>
@@ -64,11 +82,25 @@
     </details>
 
     <details>
+        <summary>NPC / Creature Template</summary>
+        <ul>
+            <div>Name / ID: </div>
+            <div>Rank: 0 0 0 0 0 0 0 0 0 0</div>
+            <div>Features: </div>
+            <div>Drives: </div>
+            <div>Tactics: </div>
+            <div>Quest Starter: </div>
+        </ul>
+    </details>
+
+    <details>
         <summary>Sector Template</summary>
         <ul>
             <div>Region Name: (eg: Terminus)</div>
+            <hr>
             <div>Sector Name: </div>
             <div>Number of Settlements: </div>
+            <div>Sector Trouble: </div>
             <hr><hr>
             <div>SOLAR SYSTEM / PRIMARY STAR: </div>
             <br>
@@ -220,8 +252,12 @@
                     <li>Void (Exists, but don't start here)</li>
                 </ul>
             </p>
+            <p>3) Create a sector inside your chosen region.</p>
+            <p>4) Name the sector.</p>
+            <p>5) Introduce a sector trouble.</p>
+            <p>6) Optionally introduce a main sector power.</p>
             
-            <p>3) Determine the number of 'starting' settlements
+            <p>7) Determine the number of 'starting' settlements in the sector, based on the chosen region:
                 <ul>
                     <li>Terminus: 4 settlements</li>
                     <li>Outlands: 3 settlements</li>
@@ -229,7 +265,7 @@
                 </ul>
             </p>
             
-            <p>4) For each settlement, follow the prompts, or randomize each settlement.
+            <p>8) For each settlement, follow the prompts, or randomize each settlement.
                 <button id="btn-rnd-settlement">Random Settlement</button>
                 <div class="bgd-yellow" id="display-rnd-settlement"></div>
                 <ol>
@@ -263,7 +299,7 @@
                     </li>
                 </ol>
             </p>
-            <p>5) If a settlement is located on a planet, or in orbit around a planet, follow the prompts or randomize the planet:
+            <p>9) If a settlement is located on a planet, or in orbit around a planet, follow the prompts or randomize the planet:
                 <button id="btn-rnd-planet">Random Planet</button>
                 <div class="bgd-yellow" id="display-rnd-planet"></div>
                 <ul>
@@ -283,9 +319,9 @@
                 </ul>
             </p>
 
-            <p>6) Choose a starting settlement</p>
+            <p>10) Choose a starting settlement</p>
             
-            <p>7) Note the primary star.</p>
+            <p>11) Note the primary star.</p>
             <details>
                 <summary class="indent">Primary Star 
                     <button id="btn-rnd-star">Random</button>
@@ -296,7 +332,7 @@
                 <br>
             </details>
 
-            <p>8) Create a sector map and label the main features
+            <p>12) Create a sector map and label the main features
                 <ul>
                     <li>* Main Star</li>
                     <li>() Planet</li>
@@ -306,7 +342,7 @@
                 </ul>
             </p>
 
-            <p>9) Draw passages.
+            <p>13) Draw passages.
                 <ul>
                     <li>Each passage must do one of two things:
                         <ul>
@@ -330,9 +366,75 @@
     <details>
         <summary>Local NPC Connection</summary>
         <ul>
-            <p>1) Create a local NPC connection. Follow the prompts or randomize the connection.</p>
+            <p>Create a local NPC connection. Follow the prompts or randomize the connection.</p>
             <button id="btn-rnd-connection">Random Connection</button>
             <div id="display-rnd-connection"></div>
+            <P>1) Give the connection a role.</P>
+            <p>2) Give the connection a rank (representing the challenge of advancing the relationship.)
+                <ul>
+                    <li>troublesome - 3 boxes per progress</li>
+                    <li>dangerous - 2 boxes per progress</li>
+                    <li>formidable - 1 box per progress</li>
+                    <li>extreme - 2 ticks per progress</li>
+                    <li>epic - 1 tick per progress</li>
+                </ul>
+            </p>
+            <p>3) Give the connection a few distinctive attributes, eg:
+                <ul>
+                    <li>First Look</li>
+                    <li>Goal</li>
+                    <li>Character Aspects</li>
+                </ul>
+            </p>
+            <p>4) Choose a settlement in your sector as the connection's home.</p>
+            <p>5) Give the connection a name.</p>
+            <p>Note that whenever your connection aids you on a move closely associated with their role, you may add +1 and take +1 momentum on a hit.</p>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Envision an Inciting Incident</summary>
+        <ul>
+            <p>Idea Sources
+                <ul>
+                    <li>Truths</li>
+                    <li>Character Paths</li>
+                    <li>Character Backstory</li>
+                    <li>Starship</li>
+                    <li>Settlements</li>
+                    <li>Connection</li>
+                    <li>Sector Trouble</li>
+                </ul>
+            </p>
+            <p> Idea Recommendations
+                <ul>
+                    <li>Make it personal.</li>
+                    <li>Make it a problem that won't go away on it's own.</li>
+                    <li>Give it a ticking clock.</li>
+                    <li>Up the stakes</li>
+                    <li>Limit the scope</li>
+                </ul>
+            </p>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Set the Scene</summary>
+        <ul>
+            <p>Scene Ideas
+            <ul>
+                <li>Start with a prologue</li>
+                <li>Start in media res</li>
+            </ul>
+        </p>
+        </ul>
+        
+    </details>
+
+    <details>
+        <summary>Swear an Iron Vow</summary>
+        <ul>
+            <p>When you swear upon iron to complete a quest, write your vow and give it a rank.<br><br>Then, roll +heart.<br><br>If you swear this vow to a connection, add +1; if you share a bond, add +2. <br><br>On a strong hit, you are emboldened and it is clear what you must do next. Take +2 momentum.<br><br>On a weak hit, you are determined but begin your quest with more questions than answers. Take +1 momentum, and envision what you do to find a path forward.<br><br>On a miss, you must overcome a significant obstacle before you begin your quest. Envision what stands in your way.</p>
         </ul>
     </details>
 
